@@ -1,0 +1,35 @@
+.navbarContainer,.linksContainer div,.subLinksContainer,.searchContainer {
+    display: flex;
+}
+.logoContainer{
+    margin-top: 10px;
+}
+.linksContainer{padding-left: 10px;padding-right: 20px;}
+.navbarContainer,.linksContainer,.subLinksContainer,.searchContainer{
+    justify-content: center;
+}
+
+.searchContainer{
+    align-items: center;
+    margin-right: 20px;
+}
+.linkItem p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Cabin,sans-serif;
+    text-transform: capitalize;
+    margin: 0;
+}
+.linkItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em;
+}
+
+.custom-menu-item-divider {
+    border: 0;
+    border-top: 1px solid #ddd; /* Change color and style as needed */
+    margin: 4px 0; /* Adjust spacing if necessary */
+  }
