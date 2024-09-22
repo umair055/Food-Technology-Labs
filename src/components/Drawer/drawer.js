@@ -100,7 +100,10 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
     setFoodTutrsExpand(!foodTutrsExpand);
   };
   const DrawerList = (
-    <Box sx={{ width: "90vw", backgroundColor: "#3f3733" }} role="presentation">
+    <Box
+      sx={{ width: "90vw", height: "100%", backgroundColor: "#3f3733" }}
+      role="presentation"
+    >
       <Box sx={{ display: "flex", pr: 2.5 }}>
         <IconButton sx={{ ml: "auto" }} onClick={() => setAnchorElNav(false)}>
           <Close sx={{ color: "#f5f2ee" }} />

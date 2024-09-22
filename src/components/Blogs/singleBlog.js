@@ -3,7 +3,6 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import "./singleBlog.css";
 import { Box } from "@mui/material";
-import zIndex from "@mui/material/styles/zIndex";
 
 const SingleBlog = () => {
   const [blog, setBlog] = React.useState(null);
@@ -11,7 +10,7 @@ const SingleBlog = () => {
   const getData = () => {
     axios
       .get(
-        `https://posts.foodtechnologylabs.com/wp-json/wp/v2/posts/${searchParams.get(
+        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts/${searchParams.get(
           "id"
         )}`
       )

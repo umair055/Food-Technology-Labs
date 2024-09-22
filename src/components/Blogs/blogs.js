@@ -28,7 +28,7 @@ const Blogs = () => {
     setLoading(true);
     axios
       .get(
-        `https://posts.foodtechnologylabs.com/wp-json/wp/v2/posts?categories=${searchParams.get(
+        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?categories=${searchParams.get(
           "category"
         )}&per_page=${postsPerPage}&page=${page}`
       )
