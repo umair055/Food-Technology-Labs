@@ -6,7 +6,6 @@ const API_BASE = process.env.REACT_APP_BASE_URL;
 // Request
 axios.interceptors.request.use(
 	function (config) {
-		console.log('intercept-req', config);
 		const token = valueFromUserData('token');
         if(config && config.headers) {
             config.headers['Content-Type'] = 'application/json';
@@ -24,7 +23,6 @@ axios.interceptors.request.use(
 //     return { data: response.data, message: response.message, error: response.error || response.message || "Something went wrong, please try again", status: response.status };
 // }
 export const responseHandler = (response) => {
-    console.log("Response:", response);
     return { data: response.data.data, message: response.data.message, error: response.data.error || response.data.message || "Something went wrong, please try again", status: response.data.status };
 }
 
@@ -62,7 +60,6 @@ export const getDataWithQuery = async (END_POINT, queries = {}) => {
 // -------------------------------------------------------------------------//
 // POST REQUEST
 export const postData = async (END_POINT, body, config = {}) => {
-	console.log(END_POINT, body);
 	const response = await axios.post(API_BASE + END_POINT, body, config);
 	return responseHandler(response);
 };
@@ -71,7 +68,6 @@ export const postData = async (END_POINT, body, config = {}) => {
 // -------------------------------------------------------------------------//
 // PUT REQUEST
 export const updateData = async (END_POINT, body, config = {}) => {
-	console.log(END_POINT, body);
 	const response = await axios.put(API_BASE + END_POINT, body, config);
 	return responseHandler(response);
 };
@@ -88,8 +84,6 @@ export const deleteData = async (END_POINT, id) => {
 
 // -------------------------------------------------------------------------//
 export const deleteDataWithBody = async (END_POINT, body) => {
-	console.log('body', body);
-
 	const response = await axios.delete(`${API_BASE}${END_POINT}`, {
 		data: body
 	});

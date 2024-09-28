@@ -43,8 +43,8 @@ const Blogs = () => {
       });
   };
 
-  const handleReadMore = (id) => {
-    navigate(`${NAVIGATION_ROUTE.singleBlog}?id=${id}`);
+  const handleReadMore = (slug) => {
+    navigate(`${NAVIGATION_ROUTE.singleBlog}/${slug}`);
   };
 
   // Handle pagination change
@@ -92,7 +92,7 @@ const Blogs = () => {
                 />
               </CardContent>
               <CardActions sx={{ marginTop: "auto" }}>
-                <Button onClick={() => handleReadMore(item.id)} size="small">
+                <Button onClick={() => handleReadMore(item.slug)} size="small">
                   Read More
                   <span style={{ marginTop: "5px" }}>
                     <ArrowRightAlt />

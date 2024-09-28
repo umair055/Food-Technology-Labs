@@ -9,7 +9,7 @@ const AppRoutes = () => {
       <Route path={NAVIGATION_ROUTE.homepage} element={<HomePage />}></Route>
       <Route path={NAVIGATION_ROUTE.blogs} element={<Blogs />}></Route>
       <Route
-        path={NAVIGATION_ROUTE.singleBlog}
+        path={`${NAVIGATION_ROUTE.singleBlog}/:slug`}
         element={<SingleBlog />}
       ></Route>
     </Routes>

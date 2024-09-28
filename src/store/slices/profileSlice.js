@@ -9,15 +9,11 @@ export const profile = createAsyncThunk(
     'profile',
     async (params, thunkApi) => {
         try {
-            console.log('here')
             const response = await getDataWithQuery('user/me', params);
-            console.log('Response from me Api', response);
-
             // Throw Err
             if(response?.status && response.status !== 200){
                 throw response
             }
-            console.log(response.data)
             return response;
         } catch (err) {
             return thunkApi.rejectWithValue(err?.error || 'Something went wrong');

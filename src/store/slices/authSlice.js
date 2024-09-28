@@ -15,13 +15,11 @@ const initialState = {
 export const login = createAsyncThunk("login", async (params, thunkApi) => {
   try {
     const response = await postData("user/login", params);
-    console.log("Response from Login Api", response);
 
     // Throw Err
     if (response?.status && response.status !== 200) {
       throw response;
     }
-    console.log(response.data);
     // Storing data locally
     setLocalData("userData", response.data);
     return response;
@@ -65,7 +63,6 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(login.rejected, (state, action) => {
-        console.log("Error checking in Login Rejected ", action);
         state.isLoading = false;
         state.isAuthenticated = false;
         state.error = action.payload.message;

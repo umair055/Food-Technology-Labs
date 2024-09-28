@@ -13,7 +13,6 @@ function Signup() {
       }}
       validationSchema={SignupSchema}
       onSubmit={values => {
-        console.log('values',values);
       }}
     >
       {({ errors, touched }) => (

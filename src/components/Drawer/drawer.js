@@ -81,7 +81,8 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
   const [foodMgmntExpand, setFoodMgmntExpand] = React.useState(true);
   const [foodTutrsExpand, setFoodTutrsExpand] = React.useState(true);
 
-  const handleOptionSelect = (category) => {
+  const handleOptionSelect = (category, name) => {
+    document.title = name;
     navigate(`${NAVIGATION_ROUTE.blogs}?category=${category}`);
   };
   const handleFoodTechClick = () => {
@@ -153,7 +154,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           <List component="div" disablePadding>
             {foodTechnologyOptions.map((item) => (
               <ListItemButton
-                onClick={() => handleOptionSelect(item.category)}
+                onClick={() => handleOptionSelect(item.category, item.name)}
                 key={item.value}
                 sx={{
                   pl: 4,
@@ -209,7 +210,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           <List component="div" disablePadding>
             {foodScienceOptions.map((item) => (
               <ListItemButton
-                onClick={() => handleOptionSelect(item.category)}
+                onClick={() => handleOptionSelect(item.category, item.name)}
                 key={item.value}
                 sx={{
                   pl: 4,
@@ -265,7 +266,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           <List component="div" disablePadding>
             {foodProcessingOption.map((item) => (
               <ListItemButton
-                onClick={() => handleOptionSelect(item.category)}
+                onClick={() => handleOptionSelect(item.category, item.name)}
                 key={item.value}
                 sx={{
                   pl: 4,
@@ -321,7 +322,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           <List component="div" disablePadding>
             {foodMangementOption.map((item) => (
               <ListItemButton
-                onClick={() => handleOptionSelect(item.category)}
+                onClick={() => handleOptionSelect(item.category, item.name)}
                 key={item.value}
                 sx={{
                   pl: 4,
@@ -377,7 +378,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           <List component="div" disablePadding>
             {foodTutorialsOption.map((item) => (
               <ListItemButton
-                onClick={() => handleOptionSelect(item.category)}
+                onClick={() => handleOptionSelect(item.category, item.name)}
                 key={item.value}
                 sx={{
                   pl: 4,

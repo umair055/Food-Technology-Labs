@@ -11,7 +11,7 @@ import { Search } from "@mui/icons-material";
 import CustomDrawer from "../Drawer/drawer";
 import { useNavigate } from "react-router-dom";
 import { NAVIGATION_ROUTE } from "../../constants";
-
+import FoodTechLogo from "./cropped-Foodtechnologylabs-logo.png";
 const foodTechnologyOptions = [
   { name: "Dairy Technology", value: 1, category: 24 },
   { name: "Sugar Technology", value: 2, category: 25 },
@@ -76,7 +76,8 @@ function ResponsiveAppBar() {
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOptionSelect = (category) => {
+  const handleOptionSelect = (category, name) => {
+    document.title = name;
     navigate(`${NAVIGATION_ROUTE.blogs}?category=${category}`);
   };
   const handleOpenNavMenu = (event) => {
@@ -93,7 +94,7 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           <Box
             component="img"
-            src="./cropped-Foodtechnologylabs-logo.png"
+            src={FoodTechLogo}
             alt="Logo"
             sx={{ width: "7.875rem", height: "5.313rem" }}
           />

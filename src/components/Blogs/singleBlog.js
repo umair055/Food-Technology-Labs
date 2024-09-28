@@ -1,54 +1,98 @@
 import axios from "axios";
 import React from "react";
-import { useSearchParams } from "react-router-dom";
 import "./singleBlog.css";
-import { Box } from "@mui/material";
+import { Box, CircularProgress, Typography } from "@mui/material";
+import { useParams } from "react-router-dom";
 
 const SingleBlog = () => {
   const [blog, setBlog] = React.useState(null);
-  let [searchParams, setSearchParams] = useSearchParams();
+  const [loading, setLoading] = React.useState(true); // Loading state
+  const [error, setError] = React.useState(null); // Error state
+  const { slug } = useParams();
+
   const getData = () => {
     axios
       .get(
-        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts/${searchParams.get(
-          "id"
-        )}`
+        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?slug=${slug}`
       )
       .then((res) => {
-        console.log(res.data);
-        const htmlContent = res.data.content?.rendered;
-        const cleanHtml = htmlContent.replace(/data-src/g, "src");
-        setBlog({
-          content: cleanHtml,
-          title: res.data.title.rendered,
-          image: res.data.featured_image_src_large[0],
-        });
+        if (res.data.length > 0) {
+          const htmlContent = res.data[0].content?.rendered;
+          const cleanHtml = htmlContent.replace(/data-src/g, "src");
+          document.title = res.data[0].title.rendered;
+          setBlog({
+            content: cleanHtml,
+            title: res.data[0].title.rendered,
+            image: res.data[0].featured_image_src_large[0],
+          });
+        } else {
+          setError("No blog found.");
+        }
+      })
+      .catch(() => {
+        setError("An error occurred while fetching the blog.");
+      })
+      .finally(() => {
+        setLoading(false); // Stop loading once data is fetched or an error occurs
       });
   };
 
-  React.useEffect(() => getData(), []);
+  React.useEffect(() => {
+    getData();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <Box sx={{ textAlign: "center", mt: 4 }}>
+        <CircularProgress />
+        <Typography variant="body1" sx={{ mt: 2 }}>
+          Loading...
+        </Typography>
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box sx={{ textAlign: "center", mt: 4 }}>
+        <Typography variant="h6" color="error">
+          {error}
+        </Typography>
+      </Box>
+    );
+  }
+
   return (
     <div>
-      <Box sx={{ textAlign: "center" }}>
-        <h2>{blog?.title}</h2>
-      </Box>
-
       <Box
-        sx={{
-          textAlign: "center",
-          position: "absolute",
-          zIndex: -1,
-          width: "100%",
-          left: "auto",
-          right: "auto",
+        component={"h2"}
+        sx={{ textAlign: "center" }}
+        dangerouslySetInnerHTML={{
+          __html: blog?.title,
         }}
-      >
+      />
+
+      {blog?.image && (
         <Box
-          sx={{ width: { xs: "95vw", sm: "95vw", md: "70vw", lg: "70vw" } }}
-          src={blog?.image}
-          component="img"
-        ></Box>
-      </Box>
+          sx={{
+            textAlign: "center",
+            position: "absolute",
+            zIndex: -1,
+            width: "100%",
+            left: "auto",
+            right: "auto",
+          }}
+        >
+          <Box
+            sx={{
+              width: { xs: "95vw", sm: "95vw", md: "70vw", lg: "70vw" },
+            }}
+            src={blog.image}
+            component="img"
+          />
+        </Box>
+      )}
+
       <Box
         sx={{
           background: "white",
