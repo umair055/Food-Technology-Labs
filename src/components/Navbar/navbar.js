@@ -78,7 +78,8 @@ function ResponsiveAppBar() {
 
   const handleOptionSelect = (category, name) => {
     document.title = name;
-    navigate(`${NAVIGATION_ROUTE.blogs}?category=${category}`);
+    const formattedName = name.toLowerCase().split(" ").join("-");
+    navigate(`${NAVIGATION_ROUTE.blogs}/${formattedName}?category=${category}`);
   };
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

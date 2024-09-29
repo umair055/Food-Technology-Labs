@@ -9,7 +9,6 @@ const SingleBlog = () => {
   const [loading, setLoading] = React.useState(true); // Loading state
   const [error, setError] = React.useState(null); // Error state
   const { slug } = useParams();
-
   const getData = () => {
     axios
       .get(

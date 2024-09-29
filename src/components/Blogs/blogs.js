@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import React from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { NAVIGATION_ROUTE } from "../../constants";
 
 const Blogs = () => {
@@ -23,7 +23,7 @@ const Blogs = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
   const [loading, setLoading] = React.useState(false);
   const postsPerPage = 10;
-
+  const { subSlug } = useParams();
   const getData = (page = 1) => {
     setLoading(true);
     axios
@@ -44,7 +44,7 @@ const Blogs = () => {
   };
 
   const handleReadMore = (slug) => {
-    navigate(`${NAVIGATION_ROUTE.singleBlog}/${slug}`);
+    navigate(`${NAVIGATION_ROUTE.singleBlog}/${subSlug}/${slug}`);
   };
 
   // Handle pagination change

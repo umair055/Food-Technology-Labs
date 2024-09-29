@@ -7,9 +7,12 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path={NAVIGATION_ROUTE.homepage} element={<HomePage />}></Route>
-      <Route path={NAVIGATION_ROUTE.blogs} element={<Blogs />}></Route>
       <Route
-        path={`${NAVIGATION_ROUTE.singleBlog}/:slug`}
+        path={`${NAVIGATION_ROUTE.blogs}/:subSlug`}
+        element={<Blogs />}
+      ></Route>
+      <Route
+        path={`${NAVIGATION_ROUTE.singleBlog}/:subSlug/:slug`}
         element={<SingleBlog />}
       ></Route>
     </Routes>
