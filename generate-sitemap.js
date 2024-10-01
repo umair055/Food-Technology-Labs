@@ -62,9 +62,7 @@ const fetchBlogLinks = async () => {
         if (res.data.length) {
           res.data.forEach((blog) => {
             singleBlogLinks.push({
-              url: `/${item.name.toLowerCase().split(" ").join("-")}/${
-                blog.slug
-              }`,
+              url: `/${blog.slug}`,
               changefreq: "weekly",
               priority: 1,
             });
@@ -72,10 +70,9 @@ const fetchBlogLinks = async () => {
         }
         // Also return the blog category link
         return {
-          url: `/blogs/${item.name
-            .toLowerCase()
-            .split(" ")
-            .join("-")}?category=${item.category}`,
+          url: `/${item.name.toLowerCase().split(" ").join("-")}?category=${
+            item.category
+          }`,
           changefreq: "weekly",
           priority: 1,
         };

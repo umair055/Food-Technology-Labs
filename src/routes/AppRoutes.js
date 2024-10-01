@@ -1,19 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/Homepage";
-import Blogs from "../components/Blogs/blogs";
-import SingleBlog from "../components/Blogs/singleBlog";
+import BlogsIndex from "../components/Blogs";
 import { NAVIGATION_ROUTE } from "../constants";
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path={NAVIGATION_ROUTE.homepage} element={<HomePage />}></Route>
       <Route
-        path={`${NAVIGATION_ROUTE.blogs}/:subSlug`}
-        element={<Blogs />}
-      ></Route>
-      <Route
-        path={`${NAVIGATION_ROUTE.singleBlog}/:subSlug/:slug`}
-        element={<SingleBlog />}
+        path={`${NAVIGATION_ROUTE.blogs}/:slug`}
+        element={<BlogsIndex />}
       ></Route>
     </Routes>
   );
