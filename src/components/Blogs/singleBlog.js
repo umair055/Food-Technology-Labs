@@ -85,6 +85,8 @@ const SingleBlog = () => {
           <Box
             sx={{
               width: { xs: "95vw", sm: "95vw", md: "70vw", lg: "70vw" },
+              objectFit: "cover",
+              aspectRatio: "auto 1024/1024",
             }}
             src={blog.image}
             component="img"
