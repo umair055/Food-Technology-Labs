@@ -10,7 +10,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <AppRoutes></AppRoutes>
+        <AppRoutes ></AppRoutes>
         <FooterBar />
       </BrowserRouter>
     </>

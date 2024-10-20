@@ -90,6 +90,7 @@ const SingleBlog = () => {
             }}
             src={blog.image}
             component="img"
+            loading="lazy"
           />
         </Box>
       )}

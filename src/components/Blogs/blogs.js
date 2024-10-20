@@ -24,13 +24,16 @@ const Blogs = () => {
   const [loading, setLoading] = React.useState(false);
   const postsPerPage = 10;
   const getData = (page = 1) => {
+    let url;
+    if (searchParams.get("category")) {
+      url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?categories=${searchParams.get(
+        "category"
+      )}&per_page=${postsPerPage}&page=${page}`;
+    } else
+      url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?per_page=${postsPerPage}&page=${page}`;
     setLoading(true);
     axios
-      .get(
-        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?categories=${searchParams.get(
-          "category"
-        )}&per_page=${postsPerPage}&page=${page}`
-      )
+      .get(url)
       .then((res) => {
         const total = res.headers["x-wp-total"];
         setTotalPosts(parseInt(total, 10));
