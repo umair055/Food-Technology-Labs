@@ -105,13 +105,14 @@
   font-weight: var(--fw-700) !important;
   font-style: italic !important;
   letter-spacing: 2px !important;
-  margin-block-end: 20px !important;
+  margin-block-end: 10px !important;
 }
 
 .hero-title {
   color: var(--gunmetal-2) !important;
   font-size: var(--fs-1) !important;
-  margin-block-end: 15px !important;
+  font-weight: 700;
+  margin-block-end: 5px !important;
 }
 
 .hero-title .span {
@@ -123,7 +124,7 @@
 
 .hero-text {
   color: var(--roman-silver) !important;
-  font-size: var(--fs-4) !important;
+  font-size: var(--fs-7) !important;
   line-height: 1.8 !important;
   margin-block-end: 30px !important;
 }
@@ -135,7 +136,7 @@
   align-items: center !important;
   gap: 8px !important;
   width: max-content !important;
-  font-size: var(--fs, var(--fs-7)) !important;
+  font-size: var(--fs, var(--fs-5)) !important;
   font-weight: var(--fw, var(--fw-500)) !important;
   padding: var(--padding, 15px 20px) !important;
   border-radius: 50px !important;
@@ -146,7 +147,7 @@
   --bg-color: var(--green-pigment) !important;
 }
 .w-100 {
-  width: 100%;
+  width: 60%;
   height: auto;
 }
 /**
@@ -178,7 +179,7 @@
    */
 
     :is(.hero, .cta, .blog, .newsletter) .btn {
-      --fs: 1.8rem;
+      --fs: 1.3rem;
       --fw: var(--fw-700);
       --padding: 18px 50px;
     }
@@ -192,7 +193,7 @@
     }
 
     .hero-title .span {
-      font-size: 5.8rem !important;
+      /* font-size: 5.8rem !important; */
     }
 
     .hero-banner {
@@ -231,10 +232,30 @@
    */
 
   .hero-title {
-    --fs-1: 5.8rem !important;
+    --fs-1: 2.0rem !important;
   }
 
   .hero .container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-banner img {
+  position: absolute; /* Allows for positioning relative to the parent */
+
+  left: 78%; /* Centers horizontally */
+  width: 413px; /* Fixed width */
+  height: 434px; /* Fixed height */
+  transform: translate(-50%, -50%); /* Offset by half the image's width and height */
+  animation: rotate 15s linear infinite; /* Animation for rotation */
+}
+
+/* Keyframes for circular animation */
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

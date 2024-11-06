@@ -6,12 +6,13 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { CustomSelect } from "../CustomSelect/customSelect";
+import  CustomSelect  from "../CustomSelect/customSelect";
 import { Search } from "@mui/icons-material";
 import CustomDrawer from "../Drawer/drawer";
 import { useNavigate } from "react-router-dom";
 import { NAVIGATION_ROUTE } from "../../constants";
-import FoodTechLogo from "./cropped-Foodtechnologylabs-logo.png";
+import FoodTechLogo from './cropped-Foodtechnologylabs-logo.png';
+
 const foodTechnologyOptions = [
   { name: "Dairy Technology", value: 1, category: 24 },
   { name: "Sugar Technology", value: 2, category: 25 },
@@ -95,6 +96,8 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           <Box
             component="img"
+
+            
             src={FoodTechLogo}
             alt="Logo"
             sx={{ width: "7.875rem", height: "5.313rem" }}
