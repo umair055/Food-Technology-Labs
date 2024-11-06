@@ -88,6 +88,7 @@ const fetchBlogLinks = async () => {
 };
 fetchBlogLinks().then((allLinks) => {
   allLinks.push({ url: "/", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/blog", changefreq: "weekly", priority: 1 });
   const stream = new SitemapStream({
     hostname: "https://www.foodtechnologylabs.com/",
   });
