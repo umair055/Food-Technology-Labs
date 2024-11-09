@@ -2,175 +2,174 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-    font-family: "Montserrat";
-    src: url("./fonts/static/Montserrat-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Montserrat";
+  src: url("./fonts/static/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  .section {
-    padding: 40px 0; /* Add padding to the section */
-  }
- 
-  
-  .service {
-    background-image: url(""); /* Background image */
-    background-color: var(--shamrock-green); /* Background color */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-position: left bottom; /* Position background image */
-    background-blend-mode: soft-light; /* Blend mode for background */
-  }
-  
-  .container {
-    max-width: 1200px; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Horizontal padding */
-  }
-  
-  .service-list {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 15px; /* Space between grid items */
-  }
-  
-  .service-item {
-    display: flex; /* Use flexbox for item alignment */
-    align-items: center; /* Center align items vertically */
-    justify-content: center; /* Center align items horizontally */
-    gap: 10px; /* Space between icon and title */
-    background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Padding inside each item */
-    transition: transform 0.3s; /* Smooth transition for hover effects */
-  }
-  
-  .service-item:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
-  }
-  
-  .item-icon {
-    background-color: var(--white_25); /* Background for the icon */
-    max-width: max-content; /* Set maximum width based on content */
-    padding: 20px; /* Padding for the icon */
-    border-radius: 50%; /* Circular shape */
-  }
-  
-  .item-title {
-    color: var(--white); /* White color for the title */
-    font-size: 1.2rem; /* Font size for the title */
-    margin: 0; /* Remove default margin */
-  }
-  
-  @media (max-width: 768px) {
-    .service-list {
-      grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .service-list {
-      grid-template-columns: 1fr; /* One column on mobile screens */
-    }
-  }
-  
-  /* 3rd Section HireCulstant Css------------------------------------*/
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  .landing-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f7fafc; /* bg-gray-100 */
-    padding: 1rem; /* p-4 */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.section {
+  padding: 40px 0; /* Add padding to the section */
+}
+
+.service {
+  background-image: url(""); /* Background image */
+  background-color: var(--shamrock-green); /* Background color */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: left bottom; /* Position background image */
+  background-blend-mode: soft-light; /* Blend mode for background */
+}
+
+.container {
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+.service-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 15px; /* Space between grid items */
+}
+
+.service-item {
+  display: flex; /* Use flexbox for item alignment */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  gap: 10px; /* Space between icon and title */
+  background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside each item */
+  transition: transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.item-icon {
+  background-color: var(--white_25); /* Background for the icon */
+  max-width: max-content; /* Set maximum width based on content */
+  padding: 20px; /* Padding for the icon */
+  border-radius: 50%; /* Circular shape */
+}
+
+.item-title {
+  color: var(--white); /* White color for the title */
+  font-size: 1.2rem; /* Font size for the title */
+  margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
   }
-  
-  .landing-content {
-    display: flex;
-    flex-direction: column; /* For small screens */
-    background-color: white; /* bg-white */
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
-    overflow: hidden;
-    max-width: 64rem; /* max-w-4xl */
-    width: 100%;
+}
+
+@media (max-width: 480px) {
+  .service-list {
+    grid-template-columns: 1fr; /* One column on mobile screens */
   }
-  
-  .text-section {
-    flex: 1; /* Takes up available space */
-    padding: 2rem; /* p-8 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .title {
-    font-size: 2.25rem; /* text-4xl */
-    font-weight: bold; /* font-bold */
-    color: #38a169; /* text-green-700 */
-    margin-bottom: 1rem; /* mb-4 */
-    text-align: center; /* text-center */
-  }
-  
-  .subtitle {
-    font-size: 1.25rem; /* text-xl */
-    color: #2f855a; /* text-green-600 */
-    margin-bottom: 1rem; /* mb-4 */
-    text-align: center; /* text-center */
-  }
-  
-  .description {
-    font-size: 1.125rem; /* text-lg */
-    color: #2f855a; /* text-green-600 */
-    margin-bottom: 1rem; /* mb-4 */
-    text-align: center; /* text-center */
-  }
-  
-  .details {
-    color: #718096; /* text-gray-600 */
-    margin-bottom: 1.5rem; /* mb-6 */
-    text-align: center; /* text-center */
-  }
-  
-  .hire-button {
-    background-color: #38a169; /* bg-green-600 */
-    color: white; /* text-white */
-    font-weight: bold; /* font-bold */
-    padding: 0.5rem 1rem; /* py-2 px-4 */
-    border-radius: 0.25rem; /* rounded */
-  }
-  
-  .hire-button:hover {
-    background-color: #2f855a; /* hover:bg-green-700 */
-  }
-  
-  .image-section {
-    flex: 1; /* Takes up available space */
-  }
-  
-  .consultant-image {
-    width: 100%; /* w-full */
-    height: 100%; /* h-full */
-    object-fit: cover; /* object-cover */
-  }
-/* blog Setcion  Css*/ 
+}
+
+/* 3rd Section HireCulstant Css------------------------------------*/
+
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7fafc; /* bg-gray-100 */
+  padding: 1rem; /* p-4 */
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column; /* For small screens */
+  background-color: white; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  overflow: hidden;
+  max-width: 64rem; /* max-w-4xl */
+  width: 100%;
+}
+
+.text-section {
+  flex: 1; /* Takes up available space */
+  padding: 2rem; /* p-8 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold; /* font-bold */
+  color: #38a169; /* text-green-700 */
+  margin-bottom: 1rem; /* mb-4 */
+  text-align: center; /* text-center */
+}
+
+.subtitle {
+  font-size: 1.25rem; /* text-xl */
+  color: #2f855a; /* text-green-600 */
+  margin-bottom: 1rem; /* mb-4 */
+  text-align: center; /* text-center */
+}
+
+.description {
+  font-size: 1.125rem; /* text-lg */
+  color: #2f855a; /* text-green-600 */
+  margin-bottom: 1rem; /* mb-4 */
+  text-align: center; /* text-center */
+}
+
+.details {
+  color: #718096; /* text-gray-600 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  text-align: center; /* text-center */
+}
+
+.hire-button {
+  background-color: #38a169; /* bg-green-600 */
+  color: white; /* text-white */
+  font-weight: bold; /* font-bold */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  border-radius: 0.25rem; /* rounded */
+}
+
+.hire-button:hover {
+  background-color: #2f855a; /* hover:bg-green-700 */
+}
+
+.image-section {
+  flex: 1; /* Takes up available space */
+}
+
+.consultant-image {
+  width: 100%; /* w-full */
+  height: 100%; /* h-full */
+  object-fit: cover; /* object-cover */
+}
+/* blog Setcion  Css*/
 
 .blog {
   padding-block-start: 0;
 }
-.section-subtitle-blog-p{
+.section-subtitle-blog-p {
   color: var(--emerald);
   font-family: var(--ff-playfair-display);
   font-size: var(--fs-3);
@@ -178,7 +177,6 @@ code {
   margin-block-end: 10px;
   text-align: center;
 }
-
 
 .blog .section-title {
   margin-block-end: 40px;
@@ -406,7 +404,7 @@ code {
 
 .testimonial-role {
   font-size: 1rem;
-  color:var(--emerald);
+  color: var(--emerald);
   margin-top: 0.5rem;
 }
 
@@ -450,7 +448,7 @@ code {
   border-radius: 50%;
   padding: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  color:var(--emerald);
+  color: var(--emerald);
   cursor: pointer;
 }
 
@@ -460,7 +458,7 @@ code {
 }
 
 .navigation-button:hover .navigation-icon {
-  color:var(--emerald);
+  color: var(--emerald);
 }
 
 .sr-only {
@@ -686,7 +684,6 @@ code {
   text-align: center;
 }
 
-
 /*9thSection --------------------------------------------------------*/
 .food-partners-section {
   position: relative;
@@ -815,7 +812,7 @@ code {
 /*10thSection Csss------------------------------------------------------*/
 .faq-section {
   padding: 4rem 0;
-  background: linear-gradient(to br, #3c9612, #398821);
+  /* background: linear-gradient(to br, #3c9612, #398821); */
   position: relative;
   overflow: hidden;
 }
@@ -824,7 +821,6 @@ code {
   position: absolute;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  
 }
 
 .faq-title {
@@ -847,14 +843,13 @@ code {
   overflow: hidden;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background: white;
-  
 }
 
 .faq-header {
   padding: 1rem 1.5rem;
   cursor: pointer;
   transition: background-color 0.2s;
-  font-size: 1.2rem ;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -879,7 +874,7 @@ code {
   bottom: 20px;
   padding: 16px;
   border-radius: 9999px; /* Fully rounded */
-  background: linear-gradient(to right, #f97316, #fbbf24); /* Gradient color */
+  background: linear-gradient(to right, #f97316, #fbbf24);
   color: white;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -910,7 +905,9 @@ code {
 /* Chat Content */
 .chat-content {
   padding: 16px;
-  height: calc(100% - 80px); /* Adjust height to account for header and footer */
+  height: calc(
+    100% - 80px
+  ); /* Adjust height to account for header and footer */
   overflow-y: auto; /* Scrollable content */
   background: rgba(255, 255, 255, 0.6); /* Light background with opacity */
   backdrop-filter: blur(10px); /* Blurred background effect */
