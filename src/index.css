@@ -943,7 +943,7 @@ code {
   background: linear-gradient(to right, #fbbf24, #f97316);
 }
 /*navBar.csss c------------------------------------------------*/
-nav {
+.navContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;

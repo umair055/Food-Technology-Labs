@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import foodTechLogo from './cropped-Foodtechnologylabs-logo.png';  // Adjust the path according to your folder structure
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import foodTechLogo from "./cropped-Foodtechnologylabs-logo.png"; // Adjust the path according to your folder structure
 
 // Navigation items data (you can replace the placeholder icons with actual icons)
 const navItems = [
@@ -24,7 +24,7 @@ function NavigationBar() {
   return (
     <div className="w-full bg-white shadow-md">
       {/* Navigation bar container */}
-      <nav className="container mx-auto px-4 py-6">
+      <nav className="navContainer container mx-auto px-4 py-6">
         <ul className="flex justify-between items-center">
           {navItems.map((item) => (
             <li key={item.title} className="flex flex-col items-center">
@@ -33,11 +33,22 @@ function NavigationBar() {
                 className="flex flex-col items-center focus:outline-none"
               >
                 {/* Display icon and title */}
-                <img src={item.icon} alt={item.title} width={60} height={60} className="mb-2" />
-                <span className="text-lg font-semibold text-green-700">{item.title}</span>
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  width={60}
+                  height={60}
+                  className="mb-2"
+                />
+                <span className="text-lg font-semibold text-green-700">
+                  {item.title}
+                </span>
               </button>
               {/* Link to the section */}
-              <Link to={item.learnMoreLink} className="text-sm text-gray-500 hover:text-green-700">
+              <Link
+                to={item.learnMoreLink}
+                className="text-sm text-gray-500 hover:text-green-700"
+              >
                 learn more
               </Link>
             </li>

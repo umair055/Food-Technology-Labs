@@ -82,8 +82,20 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
   const [foodTutrsExpand, setFoodTutrsExpand] = React.useState(true);
 
   const handleOptionSelect = (category, name) => {
+    setFoodTechExpand(true)
+    setFoodScienceExpand(true)
+    setFoodProcessExpand(true)
+    setFoodMgmntExpand(true)
+    setFoodTutrsExpand(true)
     document.title = name;
-    navigate(`${NAVIGATION_ROUTE.blogs}?category=${category}`);
+    if (name === 'Home')
+      navigate('/')
+    else {
+      const formattedName = name.toLowerCase().split(" ").join("-");
+      navigate(`${NAVIGATION_ROUTE.blogs}/${formattedName}?category=${category}`);
+    }
+    setAnchorElNav(null)
+
   };
   const handleFoodTechClick = () => {
     setFoodTechExpand(!foodTechExpand);
@@ -102,7 +114,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
   };
   const DrawerList = (
     <Box
-      sx={{ width: "90vw", height: "100%", backgroundColor: "#3f3733" }}
+      sx={{ width: "90vw", height: "1000%", backgroundColor: "#3f3733" }}
       role="presentation"
     >
       <Box sx={{ display: "flex", pr: 2.5 }}>
@@ -112,6 +124,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
       </Box>
       <List sx={{ width: "90%" }} component="nav">
         <ListItemButton
+          onClick={() => handleOptionSelect(0, 'Home')}
           sx={{ borderBottom: "1px solid #FFFFFF19", height: "70px", py: 0 }}
         >
           <ListItemText
