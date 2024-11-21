@@ -28,9 +28,9 @@ const Blogs = () => {
     if (searchParams.get("category")) {
       url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?categories=${searchParams.get(
         "category"
-      )}&per_page=${postsPerPage}&page=${page}`;
+      )}&per_page=${postsPerPage}&page=${page}&_embed=true`;
     } else
-      url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?per_page=${postsPerPage}&page=${page}`;
+      url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?per_page=${postsPerPage}&page=${page}&_embed=true`;
     setLoading(true);
     axios
       .get(url)
@@ -73,7 +73,7 @@ const Blogs = () => {
             <Card sx={{ maxWidth: 345 }} key={item.id}>
               <CardMedia
                 sx={{ height: 140 }}
-                image={item?.featured_image_src_large[0]}
+                image={item._embedded['wp:featuredmedia'][0].source_url}
                 title={item?.title.rendered}
               />
               <CardContent>

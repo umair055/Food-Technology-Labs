@@ -12,7 +12,7 @@ const SingleBlog = () => {
   const getData = () => {
     axios
       .get(
-        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?slug=${slug}`
+        `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
       )
       .then((res) => {
         if (res.data.length > 0) {
@@ -22,7 +22,7 @@ const SingleBlog = () => {
           setBlog({
             content: cleanHtml,
             title: res.data[0].title.rendered,
-            image: res.data[0].featured_image_src_large[0],
+            image: res.data[0]._embedded['wp:featuredmedia'][0].source_url,
           });
         } else {
           setError("No blog found.");
