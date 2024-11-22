@@ -26,7 +26,7 @@ code {
 }
 
 .service {
-  background-image: url(""); /* Background image */
+  /* background-image: url(""); Background image */
   background-color: var(--shamrock-green); /* Background color */
   background-repeat: no-repeat; /* Prevent background image from repeating */
   background-position: left bottom; /* Position background image */

@@ -6,12 +6,12 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import  CustomSelect  from "../CustomSelect/customSelect";
 import { Search } from "@mui/icons-material";
 import CustomDrawer from "../Drawer/drawer";
 import { useNavigate } from "react-router-dom";
 import { NAVIGATION_ROUTE } from "../../constants";
 import FoodTechLogo from './cropped-Foodtechnologylabs-logo.png';
+import CustomDropDown from "../CustomSelect/customDropDown";
 
 const foodTechnologyOptions = [
   { name: "Dairy Technology", value: 1, category: 24 },
@@ -126,12 +126,21 @@ function ResponsiveAppBar() {
               <Button
                 onClick={() => navigate("/")}
                 sx={{
-                  display: "block",
-                  fontFamily: "Cabin, sans-serif",
-                  fontSize: "20px",
-                  fontWeight: 500,
-                  textTransform: "none",
-                  color: "#3f3733",
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '6px 16px',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  lineHeight: 1.75,
+                  color: 'text.primary',
+                  backgroundColor: 'background.paper',
+                  '&:hover': {
+                    backgroundColor: 'action.hover',
+                  },
+                  '& .MuiSvgIcon-root': {
+                    marginLeft: 1,
+                  },
                 }}
               >
                 Home
@@ -144,7 +153,7 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <CustomSelect
+              <CustomDropDown
                 defaultValue={"Food Technology"}
                 options={foodTechnologyOptions}
                 onClick={handleOptionSelect}
@@ -157,7 +166,7 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <CustomSelect
+              <CustomDropDown
                 defaultValue={"Food Science"}
                 options={foodScienceOptions}
                 onClick={handleOptionSelect}
@@ -170,7 +179,7 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <CustomSelect
+              <CustomDropDown
                 defaultValue={"Food Processing"}
                 options={foodProcessingOption}
                 onClick={handleOptionSelect}
@@ -183,7 +192,7 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <CustomSelect
+              <CustomDropDown
                 defaultValue={"Food Management"}
                 options={foodMangementOption}
                 onClick={handleOptionSelect}
@@ -196,7 +205,7 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <CustomSelect
+              <CustomDropDown
                 defaultValue={"Food Tutorials"}
                 options={foodTutorialsOption}
                 onClick={handleOptionSelect}
@@ -211,12 +220,18 @@ function ResponsiveAppBar() {
             >
               <Button
                 sx={{
-                  display: "block",
-                  fontFamily: "Cabin, sans-serif",
-                  fontSize: "20px",
-                  fontWeight: 500,
-                  textTransform: "none",
-                  color: "#3f3733",
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '6px 16px',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  lineHeight: 1.75,
+                  color: 'text.primary',
+                  backgroundColor: 'background.paper',
+                  '&:hover': {
+                    backgroundColor: 'action.hover',
+                  },
                 }}
               >
                 About Us
@@ -231,12 +246,19 @@ function ResponsiveAppBar() {
             >
               <Button
                 sx={{
-                  display: "block",
-                  fontFamily: "Cabin, sans-serif",
-                  fontSize: "20px",
-                  fontWeight: 500,
-                  textTransform: "none",
-                  color: "#3f3733",
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '6px 16px',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  lineHeight: 1.75,
+                  color: 'text.primary',
+                  backgroundColor: 'background.paper',
+                  '&:hover': {
+                    backgroundColor: 'action.hover',
+                  },
+
                 }}
               >
                 Contact Us
