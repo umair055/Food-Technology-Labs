@@ -1,11 +1,9 @@
 name: Update Sitemap
 
 on:
-  # This triggers the workflow daily at midnight UTC
   schedule:
     - cron: "0 0 * * *"
 
-  # Optional: Allows you to trigger the workflow manually
   workflow_dispatch:
 
 jobs:

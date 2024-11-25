@@ -70,9 +70,8 @@ const fetchBlogLinks = async () => {
         }
         // Also return the blog category link
         return {
-          url: `/${item.name.toLowerCase().split(" ").join("-")}?category=${
-            item.category
-          }`,
+          url: `/${item.name.toLowerCase().split(" ").join("-")}?category=${item.category
+            }`,
           changefreq: "weekly",
           priority: 1,
         };
@@ -88,6 +87,7 @@ const fetchBlogLinks = async () => {
 };
 fetchBlogLinks().then((allLinks) => {
   allLinks.push({ url: "/", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/contact-us", changefreq: "monthly", priority: 0.6 });
   allLinks.push({ url: "/blog", changefreq: "weekly", priority: 1 });
   const stream = new SitemapStream({
     hostname: "https://www.foodtechnologylabs.com/",

@@ -16,7 +16,7 @@ import FormControl from '@mui/material/FormControl'
 import IconButton from '@mui/material/IconButton'
 import { Facebook, Instagram, Twitter, LinkedIn, Message, Send, Science, MenuBook, Edit, Restaurant, Mail } from '@mui/icons-material'
 import { toast, Toaster } from "sonner"
-
+import emailjs from '@emailjs/browser';
 // Create a dark theme
 const theme = createTheme({
     palette: {
@@ -75,7 +75,7 @@ const services = [
     { icon: <Restaurant />, title: 'Food Services', description: 'Comprehensive solutions for all your food-related needs.' },
     { icon: <MenuBook />, title: 'Food Blog', description: 'Stay updated with the latest in food technology and trends.' },
     { icon: <Edit />, title: 'Write for Us', description: 'Share your food expertise with our growing community.' },
-    { icon: <Mail />, title: 'Email Us', description: 'Reach out directly to our team.', email: 'Foodtechnolgylabs@gmail.com' },
+    { icon: <Mail />, title: 'Email Us', description: 'Reach out directly to our team.', email: 'foodtechnolgylabs@gmail.com' },
 ]
 
 const socialLinks = [
@@ -86,16 +86,46 @@ const socialLinks = [
 ]
 
 export default function ContactUsPage() {
+    const [formData, setFormData] = useState({
+        subject: '',
+        from_email: '',
+        body: '',
+        from_name: ''
+    });
     const [isSubmitting, setIsSubmitting] = useState(false)
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
     const handleSubmit = async (e) => {
-        e.preventDefault()
         setIsSubmitting(true)
+        e.preventDefault();
 
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 1000))
-        toast.success("Message sent successfully!")
-        setIsSubmitting(false)
+        const { subject, from_email, body, from_name } = formData;
+
+        emailjs.send(
+            'Asimbaba113310@',
+            'template_68i426o',
+            {
+                subject: subject,
+                from_email: from_email,
+                body: body,
+                from_name: from_name
+            },
+            'dl0Z3wZ2ppRm6HxyP'
+        )
+            .then((response) => {
+                toast.success('Message sent successfully!', response);
+                setIsSubmitting(false)
+            })
+            .catch((error) => {
+                toast.error('An error occurred, please try again.', error);
+                setIsSubmitting(false)
+            });
     }
 
     return (
@@ -166,9 +196,12 @@ export default function ContactUsPage() {
                                             <TextField
                                                 required
                                                 fullWidth
+                                                name='from_name'
                                                 label="Name"
                                                 variant="outlined"
                                                 placeholder="Your name"
+                                                value={formData.from_name}
+                                                onChange={handleChange}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
@@ -177,8 +210,11 @@ export default function ContactUsPage() {
                                                 fullWidth
                                                 label="Email"
                                                 variant="outlined"
+                                                name="from_email"
                                                 type="email"
                                                 placeholder="your@email.com"
+                                                value={formData.from_email}
+                                                onChange={handleChange}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -187,24 +223,30 @@ export default function ContactUsPage() {
                                                 <Select
                                                     label="Subject"
                                                     defaultValue="consulting"
+                                                    name='subject'
+                                                    value={formData.subject}
+                                                    onChange={handleChange}
                                                 >
-                                                    <MenuItem value="consulting">Food Consulting</MenuItem>
-                                                    <MenuItem value="product-development">Product Development</MenuItem>
-                                                    <MenuItem value="quality-assurance">Quality Assurance</MenuItem>
-                                                    <MenuItem value="food-safety">Food Safety</MenuItem>
-                                                    <MenuItem value="nutritional-analysis">Nutritional Analysis</MenuItem>
-                                                    <MenuItem value="packaging-solutions">Packaging Solutions</MenuItem>
-                                                    <MenuItem value="blog-contribution">Blog Contribution</MenuItem>
-                                                    <MenuItem value="write-for-us">Write for Us</MenuItem>
-                                                    <MenuItem value="partnership">Partnership Opportunities</MenuItem>
-                                                    <MenuItem value="other">Other</MenuItem>
+                                                    <MenuItem value="Consulting">Food Consulting</MenuItem>
+                                                    <MenuItem value="Product Development">Product Development</MenuItem>
+                                                    <MenuItem value="Quality Assurance">Quality Assurance</MenuItem>
+                                                    <MenuItem value="Food Safety">Food Safety</MenuItem>
+                                                    <MenuItem value="Nutritional Analysis">Nutritional Analysis</MenuItem>
+                                                    <MenuItem value="Packaging Solutions">Packaging Solutions</MenuItem>
+                                                    <MenuItem value="Blog Contribution">Blog Contribution</MenuItem>
+                                                    <MenuItem value="Write For Us">Write for Us</MenuItem>
+                                                    <MenuItem value="Partnership">Partnership Opportunities</MenuItem>
+                                                    <MenuItem value="Other">Other</MenuItem>
                                                 </Select>
                                             </FormControl>
                                         </Grid>
                                         <Grid item xs={12}>
                                             <TextField
+                                                value={formData.body}
+                                                onChange={handleChange}
                                                 required
                                                 fullWidth
+                                                name='body'
                                                 label="Message"
                                                 variant="outlined"
                                                 multiline
