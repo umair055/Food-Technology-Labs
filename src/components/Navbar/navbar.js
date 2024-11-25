@@ -234,6 +234,58 @@ function ResponsiveAppBar() {
                   },
                 }}
               >
+                Food Services
+              </Button>
+            </Box>
+            <Box
+              sx={{
+                flexGrow: 0,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                sx={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '6px 16px',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  lineHeight: 1.75,
+                  color: 'text.primary',
+                  backgroundColor: 'background.paper',
+                  '&:hover': {
+                    backgroundColor: 'action.hover',
+                  },
+                }}
+              >
+                Food Tools
+              </Button>
+            </Box>
+            <Box
+              sx={{
+                flexGrow: 0,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                sx={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '6px 16px',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  lineHeight: 1.75,
+                  color: 'text.primary',
+                  backgroundColor: 'background.paper',
+                  '&:hover': {
+                    backgroundColor: 'action.hover',
+                  },
+                }}
+              >
                 About Us
               </Button>
             </Box>
@@ -245,6 +297,7 @@ function ResponsiveAppBar() {
               }}
             >
               <Button
+                onClick={() => navigate("/contact-us")}
                 sx={{
                   display: 'inline-flex',
                   alignItems: 'center',

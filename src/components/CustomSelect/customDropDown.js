@@ -53,6 +53,7 @@ export default function CustomDropDown({ options, defaultValue, onClick }) {
                                     fontSize: "20px",
                                     fontWeight: 500,
                                     minHeight: '50px',
+                                    minWidth: '200px',
                                     height: "auto",
                                     color: "#3f3733",
                                     cursor: 'pointer',
