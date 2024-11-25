@@ -75,7 +75,7 @@ const foodTutorialsOption = [
 ];
 function ResponsiveAppBar() {
   const navigate = useNavigate();
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(false);
 
   const handleOptionSelect = (category, name) => {
     document.title = name;
@@ -83,7 +83,7 @@ function ResponsiveAppBar() {
     navigate(`${NAVIGATION_ROUTE.blogs}/${formattedName}?category=${category}`);
   };
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+    setAnchorElNav(true);
   };
 
   return (

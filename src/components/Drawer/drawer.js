@@ -90,11 +90,13 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
     document.title = name;
     if (name === 'Home')
       navigate('/')
+    else if (name === 'ContactUs')
+      navigate('/contact-us')
     else {
       const formattedName = name.toLowerCase().split(" ").join("-");
       navigate(`${NAVIGATION_ROUTE.blogs}/${formattedName}?category=${category}`);
     }
-    setAnchorElNav(null)
+    setAnchorElNav(false)
 
   };
   const handleFoodTechClick = () => {
@@ -425,6 +427,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           />
         </ListItemButton>
         <ListItemButton
+          onClick={() => handleOptionSelect(0, 'ContactUs')}
           sx={{ borderBottom: "1px solid #FFFFFF19", height: "70px", py: 0 }}
         >
           <ListItemText
