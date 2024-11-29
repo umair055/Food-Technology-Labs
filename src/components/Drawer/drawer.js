@@ -92,6 +92,8 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
       navigate('/')
     else if (name === 'ContactUs')
       navigate('/contact-us')
+    else if (name === 'AboutUs')
+      navigate('/about-us')
     else {
       const formattedName = name.toLowerCase().split(" ").join("-");
       navigate(`${NAVIGATION_ROUTE.blogs}/${formattedName}?category=${category}`);
@@ -417,6 +419,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
           </List>
         </Collapse>
         <ListItemButton
+          onClick={() => handleOptionSelect(0, 'AboutUs')}
           sx={{ borderBottom: "1px solid #FFFFFF19", height: "70px", py: 0 }}
         >
           <ListItemText

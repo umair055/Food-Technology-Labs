@@ -107,7 +107,7 @@ export const FooterBar = () => {
           >
             Useful Links
           </Typography>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to="/disclaimer" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -117,7 +117,7 @@ export const FooterBar = () => {
               Disclaimer
             </Typography>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to="/privacy-policy" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -127,7 +127,7 @@ export const FooterBar = () => {
               Privacy Policy
             </Typography>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to="/cookie-policy" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -137,7 +137,7 @@ export const FooterBar = () => {
               Cookie Policy
             </Typography>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to='/terms-and-conditions' style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -158,7 +158,7 @@ export const FooterBar = () => {
           >
             More Info
           </Typography>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to='/write-for-us' style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -175,10 +175,10 @@ export const FooterBar = () => {
                 "&:hover": { color: "hsl(152, 95%, 39%)" },
               }}
             >
-              Free Guest Post
+              Food Services
             </Typography>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to='/about-us' style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -188,7 +188,7 @@ export const FooterBar = () => {
               About Us
             </Typography>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to="/contact-us" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",

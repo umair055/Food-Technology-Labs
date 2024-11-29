@@ -264,6 +264,7 @@ function ResponsiveAppBar() {
               </Button>
             </Box>
             <Box
+              onClick={()=>{navigate('/about-us')}}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
