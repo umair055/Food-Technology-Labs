@@ -9,6 +9,7 @@ import TermsAndConditionsPage from "../pages/TermsAndConditionsPage";
 import CookiePolicyPage from "../pages/CookiePolicyPage";
 import WriteForUsPage from "../pages/WriteForUsPage";
 import AboutUsPage from "../pages/AboutUsPage";
+import TermsAndServicePage from "../pages/TermsAndServicesPage";
 
 const AppRoutes = () => {
   return (
@@ -45,6 +46,10 @@ const AppRoutes = () => {
         <Route
         path={`${NAVIGATION_ROUTE.aboutUs}`}
         element={<AboutUsPage />}
+      ></Route>
+       <Route
+        path={`${NAVIGATION_ROUTE.termsAndServices}`}
+        element={<TermsAndServicePage />}
       ></Route>
     </Routes>
   );

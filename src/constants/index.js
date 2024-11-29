@@ -8,5 +8,6 @@ export const NAVIGATION_ROUTE = {
   cookiePolicy:'/cookie-policy',
   termsAndConditions:'/terms-and-conditions',
   writeForUs:'write-for-us',
-  aboutUs:'/about-us'
+  aboutUs:'/about-us',
+  termsAndServices:'terms-and-services'
 };

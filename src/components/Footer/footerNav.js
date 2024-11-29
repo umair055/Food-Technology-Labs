@@ -22,7 +22,7 @@ export const FooterNav = () => {
         All Rights Reserved.
       </Typography>
       <Box sx={{ display: "flex", ml: "auto", gap: 2 }}>
-        <NavLink style={{ textDecoration: "none" }}>
+        <NavLink to='/terms-and-services' style={{ textDecoration: "none" }}>
           <Typography
             sx={{
               color: "hsl(0, 0%, 82%)",
@@ -32,7 +32,7 @@ export const FooterNav = () => {
             Term and Service
           </Typography>
         </NavLink>
-        <NavLink style={{ textDecoration: "none" }}>
+        <NavLink to='/privacy-policy' style={{ textDecoration: "none" }}>
           <Typography
             sx={{
               color: "hsl(0, 0%, 82%)",

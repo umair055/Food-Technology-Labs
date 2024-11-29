@@ -88,6 +88,13 @@ const fetchBlogLinks = async () => {
 fetchBlogLinks().then((allLinks) => {
   allLinks.push({ url: "/", changefreq: "monthly", priority: 0.6 });
   allLinks.push({ url: "/contact-us", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/about-us", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/disclaimer", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/privacy-policy", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/cookie-policy", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/terms-and-conditions", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/write-for-us", changefreq: "monthly", priority: 0.6 });
+  allLinks.push({ url: "/terms-and-services", changefreq: "monthly", priority: 0.6 });
   allLinks.push({ url: "/blog", changefreq: "weekly", priority: 1 });
   const stream = new SitemapStream({
     hostname: "https://www.foodtechnologylabs.com/",
