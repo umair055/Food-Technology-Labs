@@ -10,6 +10,7 @@ import CookiePolicyPage from "../pages/CookiePolicyPage";
 import WriteForUsPage from "../pages/WriteForUsPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import TermsAndServicePage from "../pages/TermsAndServicesPage";
+import ServicesPage from "../pages/ServicesPage";
 
 const AppRoutes = () => {
   return (
@@ -23,19 +24,19 @@ const AppRoutes = () => {
         path={`${NAVIGATION_ROUTE.contactUs}`}
         element={<ContactUsPage />}
       ></Route>
-        <Route
+      <Route
         path={`${NAVIGATION_ROUTE.disclaimer}`}
         element={<DisclaimerPage />}
       ></Route>
-         <Route
+      <Route
         path={`${NAVIGATION_ROUTE.privacyPolicy}`}
         element={<PrivacyPolicyPage />}
       ></Route>
-        <Route
+      <Route
         path={`${NAVIGATION_ROUTE.cookiePolicy}`}
         element={<CookiePolicyPage />}
       ></Route>
-        <Route
+      <Route
         path={`${NAVIGATION_ROUTE.termsAndConditions}`}
         element={<TermsAndConditionsPage />}
       ></Route>
@@ -43,13 +44,17 @@ const AppRoutes = () => {
         path={`${NAVIGATION_ROUTE.writeForUs}`}
         element={<WriteForUsPage />}
       ></Route>
-        <Route
+      <Route
         path={`${NAVIGATION_ROUTE.aboutUs}`}
         element={<AboutUsPage />}
       ></Route>
-       <Route
+      <Route
         path={`${NAVIGATION_ROUTE.termsAndServices}`}
         element={<TermsAndServicePage />}
+      ></Route>
+      <Route
+        path={`${NAVIGATION_ROUTE.services}`}
+        element={<ServicesPage />}
       ></Route>
     </Routes>
   );

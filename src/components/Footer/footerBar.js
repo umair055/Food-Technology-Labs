@@ -137,7 +137,10 @@ export const FooterBar = () => {
               Cookie Policy
             </Typography>
           </NavLink>
-          <NavLink to='/terms-and-conditions' style={{ textDecoration: "none" }}>
+          <NavLink
+            to="/terms-and-conditions"
+            style={{ textDecoration: "none" }}
+          >
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -158,7 +161,7 @@ export const FooterBar = () => {
           >
             More Info
           </Typography>
-          <NavLink to='/write-for-us' style={{ textDecoration: "none" }}>
+          <NavLink to="/write-for-us" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -168,7 +171,7 @@ export const FooterBar = () => {
               Write For Us
             </Typography>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to="/services" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",
@@ -178,7 +181,7 @@ export const FooterBar = () => {
               Food Services
             </Typography>
           </NavLink>
-          <NavLink to='/about-us' style={{ textDecoration: "none" }}>
+          <NavLink to="/about-us" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",

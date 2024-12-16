@@ -10,7 +10,7 @@ import { Search } from "@mui/icons-material";
 import CustomDrawer from "../Drawer/drawer";
 import { useNavigate } from "react-router-dom";
 import { NAVIGATION_ROUTE } from "../../constants";
-import FoodTechLogo from './cropped-Foodtechnologylabs-logo.png';
+import FoodTechLogo from "./cropped-Foodtechnologylabs-logo.png";
 import CustomDropDown from "../CustomSelect/customDropDown";
 
 const foodTechnologyOptions = [
@@ -96,8 +96,6 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           <Box
             component="img"
-
-            
             src={FoodTechLogo}
             alt="Logo"
             sx={{ width: "7.875rem", height: "5.313rem" }}
@@ -126,19 +124,19 @@ function ResponsiveAppBar() {
               <Button
                 onClick={() => navigate("/")}
                 sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '6px 16px',
-                  fontSize: '1rem',
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  fontSize: "1rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
-                  color: 'text.primary',
-                  backgroundColor: 'background.paper',
-                  '&:hover': {
-                    backgroundColor: 'action.hover',
+                  color: "text.primary",
+                  backgroundColor: "background.paper",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
                   },
-                  '& .MuiSvgIcon-root': {
+                  "& .MuiSvgIcon-root": {
                     marginLeft: 1,
                   },
                 }}
@@ -212,6 +210,9 @@ function ResponsiveAppBar() {
               />
             </Box>
             <Box
+              onClick={() => {
+                navigate("/services");
+              }}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
@@ -220,17 +221,17 @@ function ResponsiveAppBar() {
             >
               <Button
                 sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '6px 16px',
-                  fontSize: '1rem',
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  fontSize: "1rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
-                  color: 'text.primary',
-                  backgroundColor: 'background.paper',
-                  '&:hover': {
-                    backgroundColor: 'action.hover',
+                  color: "text.primary",
+                  backgroundColor: "background.paper",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
                   },
                 }}
               >
@@ -246,17 +247,17 @@ function ResponsiveAppBar() {
             >
               <Button
                 sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '6px 16px',
-                  fontSize: '1rem',
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  fontSize: "1rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
-                  color: 'text.primary',
-                  backgroundColor: 'background.paper',
-                  '&:hover': {
-                    backgroundColor: 'action.hover',
+                  color: "text.primary",
+                  backgroundColor: "background.paper",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
                   },
                 }}
               >
@@ -264,7 +265,9 @@ function ResponsiveAppBar() {
               </Button>
             </Box>
             <Box
-              onClick={()=>{navigate('/about-us')}}
+              onClick={() => {
+                navigate("/about-us");
+              }}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
@@ -273,17 +276,17 @@ function ResponsiveAppBar() {
             >
               <Button
                 sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '6px 16px',
-                  fontSize: '1rem',
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  fontSize: "1rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
-                  color: 'text.primary',
-                  backgroundColor: 'background.paper',
-                  '&:hover': {
-                    backgroundColor: 'action.hover',
+                  color: "text.primary",
+                  backgroundColor: "background.paper",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
                   },
                 }}
               >
@@ -300,19 +303,18 @@ function ResponsiveAppBar() {
               <Button
                 onClick={() => navigate("/contact-us")}
                 sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '6px 16px',
-                  fontSize: '1rem',
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  fontSize: "1rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
-                  color: 'text.primary',
-                  backgroundColor: 'background.paper',
-                  '&:hover': {
-                    backgroundColor: 'action.hover',
+                  color: "text.primary",
+                  backgroundColor: "background.paper",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
                   },
-
                 }}
               >
                 Contact Us
