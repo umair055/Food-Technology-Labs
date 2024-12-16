@@ -21,6 +21,7 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
+import { darken } from "@mui/material/styles";
 
 const services = [
   { name: "Food Safety & Quality Consulting", icon: Agriculture },
@@ -99,8 +100,13 @@ export default function ServicesPage() {
           </Typography>
           <Button
             variant="contained"
-            sx={{ backgroundColor: "#05c26a" }}
-            href="/contact"
+            sx={{
+              backgroundColor: "#05c26a",
+              "&:hover": {
+                backgroundColor: darken("#05c26a", 0.2), // Darken by 20%
+              },
+            }}
+            href="/contact-us"
           >
             Get Started with Food Consulting
           </Button>
@@ -164,8 +170,13 @@ export default function ServicesPage() {
           </Typography>
           <Button
             variant="contained"
-            sx={{ backgroundColor: "#05c26a" }}
-            href="/contact"
+            sx={{
+              backgroundColor: "#05c26a",
+              "&:hover": {
+                backgroundColor: darken("#05c26a", 0.2), // Darken by 20%
+              },
+            }}
+            href="/contact-us"
           >
             Contact Us
           </Button>
