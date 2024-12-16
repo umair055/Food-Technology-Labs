@@ -145,6 +145,35 @@ function ResponsiveAppBar() {
               </Button>
             </Box>
             <Box
+              onClick={() => {
+                navigate("/services");
+              }}
+              sx={{
+                flexGrow: 0,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                sx={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "6px 16px",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  lineHeight: 1.75,
+                  color: "text.primary",
+                  backgroundColor: "background.paper",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
+                  },
+                }}
+              >
+                Food Services
+              </Button>
+            </Box>
+            <Box
               sx={{
                 flexGrow: 0.2,
                 display: { xs: "none", md: "flex" },
@@ -208,35 +237,6 @@ function ResponsiveAppBar() {
                 options={foodTutorialsOption}
                 onClick={handleOptionSelect}
               />
-            </Box>
-            <Box
-              onClick={() => {
-                navigate("/services");
-              }}
-              sx={{
-                flexGrow: 0,
-                display: { xs: "none", md: "flex" },
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                sx={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "6px 16px",
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  lineHeight: 1.75,
-                  color: "text.primary",
-                  backgroundColor: "background.paper",
-                  "&:hover": {
-                    backgroundColor: "action.hover",
-                  },
-                }}
-              >
-                Food Services
-              </Button>
             </Box>
             <Box
               sx={{
