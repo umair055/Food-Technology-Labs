@@ -6,7 +6,7 @@ import "./footerBar.css";
 import { FooterNav } from "./footerNav";
 import {
   FacebookRounded,
-  LinkedIn,
+  Instagram,
   Mail,
   Twitter,
   WhatsApp,
@@ -37,6 +37,12 @@ export const FooterBar = () => {
           <Box>
             <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
               <FacebookRounded
+                onClick={() =>
+                  window.open(
+                    "https://www.facebook.com/foodtechnologylabs?mibextid=ZbWKwL",
+                    "_blank"
+                  )
+                }
                 sx={{
                   color: "hsl(0, 0%, 82%)",
                   fontSize: "1rem",
@@ -52,6 +58,9 @@ export const FooterBar = () => {
               />
 
               <Twitter
+                onClick={() =>
+                  window.open("https://x.com/foodtechnology0?s=09", "_blank")
+                }
                 sx={{
                   color: "hsl(0, 0%, 82%)",
                   fontSize: "1rem",
@@ -65,7 +74,13 @@ export const FooterBar = () => {
                   },
                 }}
               />
-              <LinkedIn
+              <Instagram
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/food_technology_labs?igsh=bnNibnpodnM1aDBt",
+                    "_blank"
+                  )
+                }
                 sx={{
                   color: "hsl(0, 0%, 82%)",
                   fontSize: "1rem",
@@ -81,6 +96,12 @@ export const FooterBar = () => {
               />
 
               <WhatsApp
+                onClick={() =>
+                  window.open(
+                    "https://whatsapp.com/channel/0029VaJYBj08kyyD6pUdW31p",
+                    "_blank"
+                  )
+                }
                 sx={{
                   color: "hsl(0, 0%, 82%)",
                   fontSize: "1rem",
