@@ -11,4 +11,5 @@ export const NAVIGATION_ROUTE = {
   aboutUs: "/about-us",
   termsAndServices: "terms-and-services",
   services: "services",
+  tools: "tools",
 };

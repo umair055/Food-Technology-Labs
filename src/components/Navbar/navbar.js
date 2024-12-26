@@ -239,6 +239,9 @@ function ResponsiveAppBar() {
               />
             </Box>
             <Box
+              onClick={() => {
+                navigate("/tools");
+              }}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },

@@ -11,6 +11,7 @@ import WriteForUsPage from "../pages/WriteForUsPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import TermsAndServicePage from "../pages/TermsAndServicesPage";
 import ServicesPage from "../pages/ServicesPage";
+import ToolsPage from "../pages/ToolsPage";
 
 const AppRoutes = () => {
   return (
@@ -56,6 +57,7 @@ const AppRoutes = () => {
         path={`${NAVIGATION_ROUTE.services}`}
         element={<ServicesPage />}
       ></Route>
+      <Route path={`${NAVIGATION_ROUTE.tools}`} element={<ToolsPage />}></Route>
     </Routes>
   );
 };
