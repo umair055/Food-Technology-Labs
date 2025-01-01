@@ -73,7 +73,7 @@ const Blogs = () => {
             <Card sx={{ maxWidth: 345 }} key={item.id}>
               <CardMedia
                 sx={{ height: 140 }}
-                image={item._embedded['wp:featuredmedia'][0].source_url}
+                image={item._embedded["wp:featuredmedia"][0].source_url}
                 title={item?.title.rendered}
               />
               <CardContent>

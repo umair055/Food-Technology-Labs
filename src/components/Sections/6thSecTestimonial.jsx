@@ -4,28 +4,46 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Food Critic",
+    name: "John D.",
+    role: "Food Manufacturer",
     content:
-      "The flavors in their dishes are simply extraordinary. Each bite is a journey through exquisite tastes and textures.",
+      "Food Technology Labs transformed our approach to food safety. Their consulting services are unmatched, and the team's expertise made compliance seamless.",
     image: "/placeholder.svg?height=100&width=100",
     rating: 5,
   },
   {
     id: 2,
-    name: "Mike Chen",
-    role: "Chef",
+    name: "Sarah K.",
+    role: "Restaurant Owner",
     content:
-      "As a chef myself, I'm impressed by the creativity and attention to detail in every dish. It's culinary artistry at its finest.",
+      "Their meal planning services were a game-changer for my restaurant. The tailored dietary plans helped us attract a wider audience with diverse nutritional needs.",
     image: "/placeholder.svg?height=100&width=100",
     rating: 5,
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Food Blogger",
+    name: "Michael L.",
+    role: "Food Tech Entrepreneur",
     content:
-      "From the ambiance to the service to the food itself, every aspect of my dining experience was absolutely perfect.",
+      "Thanks to their AI solutions, we optimized our food production process and saw a significant boost in efficiency. Highly recommended!",
+    image: "/placeholder.svg?height=100&width=100",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Emily R.",
+    role: "Product Developer",
+    content:
+      "Food Technology Labs is my go-to source for market research and recipe testing. They helped us launch a successful product line in record time!",
+    image: "/placeholder.svg?height=100&width=100",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Dr. Rachel M.",
+    role: "Food Scientist",
+    content:
+      "The tools and calculators available on their site are incredibly helpful. They’ve made my job as a food scientist so much easier!",
     image: "/placeholder.svg?height=100&width=100",
     rating: 5,
   },
