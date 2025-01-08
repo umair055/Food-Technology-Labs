@@ -21,7 +21,7 @@ const ServiceSection = () => {
             <h3 className="h3 item-title">Food Services</h3>
           </li>
 
-          <li onClick={() => navigate("/blogs")} className="service-item">
+          <li onClick={() => navigate("/blog")} className="service-item">
             <div className="item-icon">
               <BookOpen className="w-10 h-10 text-blue-500" />
             </div>
