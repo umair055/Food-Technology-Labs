@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import imageBg from './images/images/cta-bg.png'
-import imageProduct from './images/images/FOOD CONSULTANT (2).png'
-
+import { motion } from "framer-motion";
+import styled from "styled-components";
+import imageBg from "./images/images/cta-bg.png";
+import imageProduct from "./images/images/FOOD CONSULTANT (2).png";
+import { useNavigate } from "react-router-dom";
 
 // Styled components
 const Section = styled.section`
@@ -83,6 +83,7 @@ const ImageContainer = styled(motion.div)`
 `;
 
 export default function FoodSection() {
+  const navigate = useNavigate();
   return (
     <Section>
       <Container>
@@ -94,7 +95,8 @@ export default function FoodSection() {
           <TextCenter>
             <Title>Your Food, Our Passion</Title>
             <Subtitle>
-              Are You Facing Food Safety & Quality-Related Issues In Your Food Business?
+              Are You Facing Food Safety & Quality-Related Issues In Your Food
+              Business?
             </Subtitle>
           </TextCenter>
         </motion.div>
@@ -109,10 +111,14 @@ export default function FoodSection() {
               Food Technology Labs Offers Unique Solutions For This!
             </SolutionTitle>
             <SolutionText>
-              Our experts are ready to assist you with short-term needs or long-term projects. You're just one click away
-              from the solution you've been searching for.
+              Our experts are ready to assist you with short-term needs or
+              long-term projects. You're just one click away from the solution
+              you've been searching for.
             </SolutionText>
             <Button
+              onClick={() => {
+                navigate("/services");
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

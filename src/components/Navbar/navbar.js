@@ -111,12 +111,11 @@ function ResponsiveAppBar() {
               flexWrap: "wrap",
               justifyContent: "center",
               paddingLeft: 2,
-              paddingRight: 3,
             }}
           >
             <Box
               sx={{
-                flexGrow: 0.2,
+                flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
               }}
@@ -127,8 +126,8 @@ function ResponsiveAppBar() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "6px 16px",
-                  fontSize: "1rem",
+                  padding: "6px 12px",
+                  fontSize: "0.8rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -159,8 +158,8 @@ function ResponsiveAppBar() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "6px 16px",
-                  fontSize: "1rem",
+                  padding: "6px 12px",
+                  fontSize: "0.8rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -175,7 +174,7 @@ function ResponsiveAppBar() {
             </Box>
             <Box
               sx={{
-                flexGrow: 0.2,
+                flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
               }}
@@ -188,7 +187,7 @@ function ResponsiveAppBar() {
             </Box>
             <Box
               sx={{
-                flexGrow: 0.2,
+                flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
               }}
@@ -201,7 +200,7 @@ function ResponsiveAppBar() {
             </Box>
             <Box
               sx={{
-                flexGrow: 0.2,
+                flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
               }}
@@ -214,7 +213,7 @@ function ResponsiveAppBar() {
             </Box>
             <Box
               sx={{
-                flexGrow: 0.2,
+                flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
               }}
@@ -227,7 +226,7 @@ function ResponsiveAppBar() {
             </Box>
             <Box
               sx={{
-                flexGrow: 0.2,
+                flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "center",
               }}
@@ -253,8 +252,8 @@ function ResponsiveAppBar() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "6px 16px",
-                  fontSize: "1rem",
+                  padding: "6px 12px",
+                  fontSize: "0.8rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -282,8 +281,8 @@ function ResponsiveAppBar() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "6px 16px",
-                  fontSize: "1rem",
+                  padding: "6px 12px",
+                  fontSize: "0.8rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -309,8 +308,8 @@ function ResponsiveAppBar() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "6px 16px",
-                  fontSize: "1rem",
+                  padding: "6px 12px",
+                  fontSize: "0.8rem",
                   fontWeight: 600,
                   lineHeight: 1.75,
                   color: "text.primary",

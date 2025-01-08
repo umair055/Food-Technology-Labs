@@ -38,7 +38,7 @@ function HomePage() {
 
             <Button className="btn btn-primary" variant="contained">
               <Link
-                to="/get-started"
+                to="/services"
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="span">Get Started</span>
