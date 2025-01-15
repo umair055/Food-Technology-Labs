@@ -192,7 +192,7 @@ export const FooterBar = () => {
               Write For Us
             </Typography>
           </NavLink>
-          <NavLink to="/services" style={{ textDecoration: "none" }}>
+          <NavLink to="/food-services" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "hsl(0, 0%, 82%)",

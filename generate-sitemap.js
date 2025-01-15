@@ -113,7 +113,7 @@ fetchBlogLinks().then((allLinks) => {
     priority: 0.6,
   });
   allLinks.push({
-    url: "/services",
+    url: "/food-services",
     changefreq: "monthly",
     priority: 0.6,
   });

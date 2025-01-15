@@ -145,7 +145,7 @@ function ResponsiveAppBar() {
             </Box>
             <Box
               onClick={() => {
-                navigate("/services");
+                navigate("/food-services");
               }}
               sx={{
                 flexGrow: 0,

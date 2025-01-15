@@ -10,6 +10,6 @@ export const NAVIGATION_ROUTE = {
   writeForUs: "write-for-us",
   aboutUs: "/about-us",
   termsAndServices: "terms-and-services",
-  services: "services",
+  services: "food-services",
   tools: "tools",
 };
