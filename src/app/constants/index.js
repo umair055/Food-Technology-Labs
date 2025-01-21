@@ -1,0 +1,16 @@
+export const NAVIGATION_ROUTE = {
+  homepage: "/",
+  blogs: "",
+  singleBlog: "",
+  contactUs: "/contact-us",
+  disclaimer: "/disclaimer",
+  privacyPolicy: "/privacy-policy",
+  cookiePolicy: "/cookie-policy",
+  termsAndConditions: "/terms-and-conditions",
+  writeForUs: "write-for-us",
+  aboutUs: "/about-us",
+  termsAndServices: "terms-and-services",
+  services: "food-services",
+  tools: "tools",
+  foodGenerator: "tools/food-generator",
+};

@@ -1,0 +1,5 @@
+.footerContainer{
+    background-image: url(./hero-left-bg.png),url(./hero-right-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+}
