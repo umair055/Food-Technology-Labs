@@ -26,7 +26,10 @@ const ServiceSection = () => {
             <h3 className="h3 item-title">Food Services</h3>
           </li>
 
-          <li onClick={() => router("/blog")} className="service-item">
+          <li
+            onClick={() => router.push("/blogs?page=1")}
+            className="service-item"
+          >
             <div className="item-icon">
               <BookOpen className="w-10 h-10 text-blue-500" />
             </div>

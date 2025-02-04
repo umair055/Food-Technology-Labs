@@ -1,0 +1,46 @@
+p {
+  font-size: 19px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+.alignfull{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: auto !important;
+}
+
+
+.wp-block-table .has-fixed-layout {
+  table-layout: fixed;
+  width: 100%;
+}
+.wp-block-table {
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.wp-block-table table {
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.wp-block-table .has-fixed-layout tr {
+  border-collapse: collapse;
+  word-break: normal;
+}
+.wp-block-table .has-fixed-layout td {
+  word-break: break-word;
+  padding: 0.5em;
+  border: 1px solid #6b6765;
+}
+.has-text-align-left {
+  text-align: left;
+}
+.has-text-align-center {
+  text-align: center;
+}
+
+.wp-block-table figcaption {
+  font-size: 80%;
+  text-align: center;
+}
