@@ -26,6 +26,7 @@ export default function CustomDropDown({ options, defaultValue, onClick }) {
             backgroundColor: "background.paper",
             "&:hover": {
               backgroundColor: "action.hover",
+              color: "black",
             },
             "& .MuiSvgIcon-root": {
               marginLeft: 1,

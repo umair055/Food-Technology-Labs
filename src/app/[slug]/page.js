@@ -13,7 +13,39 @@ import Link from "next/link";
 import "./singleBlog.css";
 const postsPerPage = 10;
 
-const Blogs = async ({ searchParams, params }) => {
+export async function generateMetadata({ searchParams, params }) {
+  let { category } = (await searchParams) || {};
+  let { slug } = (await params) || {};
+
+  if (slug && !category) {
+    const response = await axios.get(
+      `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
+    );
+    const title = response.data[0]?.title.rendered || "Blog Post";
+    return {
+      title,
+      description: "Read our latest blog post on Food Technology Labs.",
+    };
+  }
+
+  if (category) {
+    const categoryResponse = await axios.get(
+      `https://blog.foodtechnologylabs.com/wp-json/wp/v2/categories/${category}`
+    );
+    const categoryName = categoryResponse.data.name || "Blog Category";
+    return {
+      title: `${categoryName}`,
+      description: `Explore blog posts under the ${categoryName} category.`,
+    };
+  }
+
+  return {
+    title: "Blog - Food Technology Labs",
+    description: "Read our latest articles on Food Technology Labs.",
+  };
+}
+
+const SingleBlog = async ({ searchParams, params }) => {
   let { category, page } = await searchParams;
   let { slug } = await params;
   let url = "";
@@ -24,10 +56,9 @@ const Blogs = async ({ searchParams, params }) => {
     url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?slug=${slug}&_embed`;
   } else
     url = `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?categories=${category}&per_page=${postsPerPage}&page=${page}&_embed=true`;
-  const dat = await axios.get(
+  const data = await axios.get(
     "https://blog.foodtechnologylabs.com/what-does-kombucha-taste-like"
   );
-  console.log(dat.data);
   const response = await axios.get(url);
   let blog;
   if (!category) {
@@ -109,7 +140,7 @@ const Blogs = async ({ searchParams, params }) => {
           component={"h2"}
           sx={{ textAlign: "center", display: "none" }}
           dangerouslySetInnerHTML={{
-            __html: dat.data,
+            __html: data.data,
           }}
         />
         <Box
@@ -164,4 +195,4 @@ const Blogs = async ({ searchParams, params }) => {
     );
 };
 
-export default Blogs;
+export default SingleBlog;

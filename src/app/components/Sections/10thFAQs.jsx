@@ -234,7 +234,6 @@ export default function FAQSection() {
                 <div className="faq-item">
                   <div
                     onClick={() => {
-                      console.log(index);
                       setExpandedIndex(
                         expandedIndex === `item-${index}`
                           ? null

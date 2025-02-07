@@ -80,9 +80,9 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(false);
 
   const handleOptionSelect = (category, name) => {
-    document.title = name;
     const formattedName = name.toLowerCase().split(" ").join("-");
-    navigate.push(
+
+    return navigate.push(
       `${NAVIGATION_ROUTE.blogs}/${formattedName}?category=${category}`
     );
   };
@@ -120,7 +120,7 @@ function ResponsiveAppBar() {
               }}
             >
               <Button
-                onClick={() => navigate.push("/")}
+                href={"/"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -133,6 +133,7 @@ function ResponsiveAppBar() {
                   backgroundColor: "background.paper",
                   "&:hover": {
                     backgroundColor: "action.hover",
+                    color: "black",
                   },
                   "& .MuiSvgIcon-root": {
                     marginLeft: 1,
@@ -143,9 +144,6 @@ function ResponsiveAppBar() {
               </Button>
             </Box>
             <Box
-              onClick={() => {
-                navigate.push("/food-services");
-              }}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
@@ -153,6 +151,7 @@ function ResponsiveAppBar() {
               }}
             >
               <Button
+                href={"/food-services"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -165,6 +164,7 @@ function ResponsiveAppBar() {
                   backgroundColor: "background.paper",
                   "&:hover": {
                     backgroundColor: "action.hover",
+                    color: "black",
                   },
                 }}
               >
@@ -237,9 +237,6 @@ function ResponsiveAppBar() {
               />
             </Box>
             <Box
-              onClick={() => {
-                navigate.push("/tools");
-              }}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
@@ -247,6 +244,7 @@ function ResponsiveAppBar() {
               }}
             >
               <Button
+                href={"/tools"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -259,6 +257,7 @@ function ResponsiveAppBar() {
                   backgroundColor: "background.paper",
                   "&:hover": {
                     backgroundColor: "action.hover",
+                    color: "black",
                   },
                 }}
               >
@@ -266,9 +265,6 @@ function ResponsiveAppBar() {
               </Button>
             </Box>
             <Box
-              onClick={() => {
-                navigate.push("/about-us");
-              }}
               sx={{
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
@@ -276,6 +272,7 @@ function ResponsiveAppBar() {
               }}
             >
               <Button
+                href={"/about-us"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -288,6 +285,7 @@ function ResponsiveAppBar() {
                   backgroundColor: "background.paper",
                   "&:hover": {
                     backgroundColor: "action.hover",
+                    color: "black",
                   },
                 }}
               >
@@ -302,7 +300,7 @@ function ResponsiveAppBar() {
               }}
             >
               <Button
-                onClick={() => navigate.push("/contact-us")}
+                href={"/contact-us"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -315,6 +313,7 @@ function ResponsiveAppBar() {
                   backgroundColor: "background.paper",
                   "&:hover": {
                     backgroundColor: "action.hover",
+                    color: "black",
                   },
                 }}
               >

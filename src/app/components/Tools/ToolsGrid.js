@@ -37,9 +37,7 @@ const ToolsGrid = () => {
     );
   };
 
-  const handleToolClick = (id) => {
-    console.log(`Opening tool: ${id}`);
-  };
+  const handleToolClick = (id) => {};
 
   return (
     <Box sx={{ maxWidth: 1200, margin: "auto", padding: 3 }}>
