@@ -22,9 +22,19 @@ export async function generateMetadata({ searchParams, params }) {
       `https://blog.foodtechnologylabs.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
     );
     const title = response.data[0]?.title.rendered || "Blog Post";
+    const description = response.data[0]?.yoast_head_json?.description
+      ? response.data[0]?.yoast_head_json?.description
+      : "Read our latest blog post on Food Technology Labs.";
+    const metaImage =
+      response.data[0]?.yoast_head_json?.og_image &&
+      response.data[0]?.yoast_head_json?.og_image[0]
+        ? response.data[0]?.yoast_head_json?.og_image[0].url
+        : null;
+    console.log(response.data[0]);
     return {
       title,
-      description: "Read our latest blog post on Food Technology Labs.",
+      description,
+      metaImage,
     };
   }
 
@@ -62,7 +72,7 @@ const SingleBlog = async ({ searchParams, params }) => {
   const response = await axios.get(url);
   let blog;
   if (!category) {
-    const htmlContent = response.data[0].content?.rendered;
+    const htmlContent = response.data[0]?.content?.rendered;
     const cleanHtml = htmlContent.replace(/data-src/g, "src");
     blog = {
       content: cleanHtml,
