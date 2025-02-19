@@ -26,7 +26,7 @@ const BlogSection = () => {
         <ul className="blog-list">
           {blogs.map((item, index) => (
             <li key={index}>
-              <div className="blog-card" style={{ height: "88vh" }}>
+              <div className="blog-card">
                 <figure className="card-banner">
                   <Image
                     src={item?._embedded["wp:featuredmedia"][0]?.source_url}
@@ -37,7 +37,7 @@ const BlogSection = () => {
                     className="w-100"
                   />
                 </figure>
-                <div className="card-content" style={{ height: "100%" }}>
+                <div className="card-content">
                   <div className="card-wrapper">
                     <div className="wrapper-item">
                       <ion-icon name="calendar-clear-outline"></ion-icon>
@@ -58,9 +58,8 @@ const BlogSection = () => {
                       __html: item?.title.rendered,
                     }}
                     className="h3 card-title"
-                    style={{ height: "25%" }}
                   ></h3>
-                  <a href="./404.html" className="btn btn-primary">
+                  <a className="btn btn-primary">
                     <span>Read More</span>
                     <ion-icon
                       name="chevron-forward"
