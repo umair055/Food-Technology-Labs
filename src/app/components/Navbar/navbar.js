@@ -14,7 +14,6 @@ import { NAVIGATION_ROUTE } from "../../constants";
 import FoodTechLogo from "./cropped-Foodtechnologylabs-logo.png";
 import CustomDropDown from "../CustomSelect/customDropDown";
 import Image from "next/image";
-import { Typography } from "@mui/material";
 
 const foodTechnologyOptions = [
   { name: "Dairy Technology", value: 1, category: 24 },
@@ -104,7 +103,7 @@ function ResponsiveAppBar() {
             <IconButton
               onClick={handleOpenNavMenu}
               sx={{ marginLeft: "auto" }}
-              aria-label="Open navigation menu"
+              aria-label="Open navigation menu" // Add this line
             >
               <MenuIcon sx={{ fontSize: "2.5rem" }} />
             </IconButton>
@@ -124,14 +123,14 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <Typography
+              <Button
                 href={"/"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "6px 12px",
-                  fontSize: "1rem",
+                  fontSize: "0.8rem",
                   fontWeight: 700,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -146,7 +145,7 @@ function ResponsiveAppBar() {
                 }}
               >
                 Home
-              </Typography>
+              </Button>
             </Box>
             <Box
               sx={{
@@ -155,14 +154,14 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <Typography
+              <Button
                 href={"/food-services"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "6px 12px",
-                  fontSize: "1rem",
+                  fontSize: "0.8rem",
                   fontWeight: 700,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -174,7 +173,7 @@ function ResponsiveAppBar() {
                 }}
               >
                 Food Services
-              </Typography>
+              </Button>
             </Box>
             <Box
               sx={{
@@ -248,14 +247,14 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <Typography
+              <Button
                 href={"/tools"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "6px 12px",
-                  fontSize: "1rem",
+                  fontSize: "0.8rem",
                   fontWeight: 700,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -267,7 +266,7 @@ function ResponsiveAppBar() {
                 }}
               >
                 Food Tools
-              </Typography>
+              </Button>
             </Box>
             <Box
               sx={{
@@ -276,14 +275,14 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <Typography
+              <Button
                 href={"/about-us"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "6px 12px",
-                  fontSize: "1rem",
+                  fontSize: "0.8rem",
                   fontWeight: 700,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -295,7 +294,7 @@ function ResponsiveAppBar() {
                 }}
               >
                 About Us
-              </Typography>
+              </Button>
             </Box>
             <Box
               sx={{
@@ -304,14 +303,14 @@ function ResponsiveAppBar() {
                 justifyContent: "center",
               }}
             >
-              <Typography
+              <Button
                 href={"/contact-us"}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "6px 12px",
-                  fontSize: "1rem",
+                  fontSize: "0.8rem",
                   fontWeight: 700,
                   lineHeight: 1.75,
                   color: "text.primary",
@@ -323,7 +322,7 @@ function ResponsiveAppBar() {
                 }}
               >
                 Contact Us
-              </Typography>
+              </Button>
             </Box>
           </Box>
           <Box sx={{ paddingRight: 2, display: { xs: "none", md: "flex" } }}>

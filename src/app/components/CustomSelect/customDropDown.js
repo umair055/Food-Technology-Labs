@@ -13,13 +13,13 @@ export default function CustomDropDown({ options, defaultValue, onClick }) {
       onMouseLeave={() => setIsOpen(false)}
     >
       <div>
-        <Typography
+        <Button
           sx={{
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
             padding: "6px 12px",
-            fontSize: "1rem",
+            fontSize: "0.8rem",
             fontWeight: 700,
             lineHeight: 1.75,
             color: "text.primary",
@@ -35,7 +35,7 @@ export default function CustomDropDown({ options, defaultValue, onClick }) {
         >
           {defaultValue}
           <ArrowDropDownOutlined aria-hidden="true" />
-        </Typography>
+        </Button>
       </div>
 
       {isOpen && (
@@ -53,7 +53,7 @@ export default function CustomDropDown({ options, defaultValue, onClick }) {
                   paddingLeft: 1,
                   paddingRight: 1,
                   fontSize: "16px",
-                  fontWeight: 600,
+                  fontWeight: 500,
                   minHeight: "35px",
                   minWidth: "200px",
                   height: "auto",
