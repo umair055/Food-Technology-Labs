@@ -30,7 +30,6 @@ export async function generateMetadata({ searchParams, params }) {
       response.data[0]?.yoast_head_json?.og_image[0]
         ? response.data[0]?.yoast_head_json?.og_image[0].url
         : null;
-    console.log(response.data[0]);
     return {
       title,
       description,
@@ -72,15 +71,15 @@ const SingleBlog = async ({ searchParams, params }) => {
   const response = await axios.get(url);
   let blog;
   if (!category) {
-    const htmlContent = response.data[0]?.content?.rendered;
+    const htmlContent = response?.data[0]?.content?.rendered;
     const cleanHtml = htmlContent.replace(/data-src/g, "src");
     blog = {
       content: cleanHtml,
-      title: response.data[0].title.rendered,
-      image: response.data[0]._embedded["wp:featuredmedia"][0].source_url,
+      title: response?.data[0]?.title?.rendered,
+      image: response?.data[0]?._embedded["wp:featuredmedia"][0]?.source_url,
     };
   }
-  const blogs = response.data;
+  const blogs = response?.data;
   const totalPages = Math.ceil(response.headers["x-wp-total"] / postsPerPage);
 
   if (category)
@@ -93,13 +92,13 @@ const SingleBlog = async ({ searchParams, params }) => {
               <Card sx={{ maxWidth: 345 }} key={item.id}>
                 <CardMedia
                   sx={{ height: 140 }}
-                  image={item._embedded["wp:featuredmedia"][0].source_url}
+                  image={item?._embedded["wp:featuredmedia"][0]?.source_url}
                   title={item?.title.rendered}
                 />
                 <CardContent>
                   <Typography
                     dangerouslySetInnerHTML={{
-                      __html: item?.title.rendered,
+                      __html: item?.title?.rendered,
                     }}
                     gutterBottom
                     variant="h5"
@@ -150,7 +149,7 @@ const SingleBlog = async ({ searchParams, params }) => {
           component={"h2"}
           sx={{ textAlign: "center", display: "none" }}
           dangerouslySetInnerHTML={{
-            __html: data.data,
+            __html: data?.data,
           }}
         />
         <Box
@@ -179,7 +178,7 @@ const SingleBlog = async ({ searchParams, params }) => {
                 aspectRatio: "auto 1024/1024",
                 display: "initial",
               }}
-              src={blog.image}
+              src={blog?.image}
               component="img"
               loading="lazy"
             />

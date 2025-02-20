@@ -82,13 +82,13 @@ export default function TestimonialSection() {
             }`}
           >
             <div className="testimonial-content">
-              <Image
+              {/* <Image
                 src={currentTestimonial.image}
                 alt={currentTestimonial.name}
                 className="testimonial-image"
                 width={100}
                 height={100}
-              />
+              /> */}
               <div className="testimonial-info">
                 <h3 className="testimonial-name">{currentTestimonial.name}</h3>
                 <p className="testimonial-role">{currentTestimonial.role}</p>

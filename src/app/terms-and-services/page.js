@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   Container,
@@ -15,6 +14,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GavelIcon from "@mui/icons-material/Gavel";
 import EmailIcon from "@mui/icons-material/Email";
 
+export const metadata = {
+  title: "Terms And Services",
+  description:
+    "Learn about the terms and services governing your use of Food Technology Labs. Explore our policies and user agreements in detail.",
+  alternates: {
+    canonical: "https://www.foodtechnologylabs.com/terms-and-services",
+  },
+};
 export default function TermsAndServicePage() {
   const termsItems = [
     {

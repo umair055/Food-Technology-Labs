@@ -67,8 +67,13 @@ export default function ServicesPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Typography variant="h2" fontWeight="bold" gutterBottom>
-            Our Services
+          <Typography
+            variant="h1"
+            fontWeight="bold"
+            sx={{ fontSize: "3.5rem" }}
+            gutterBottom
+          >
+            Our Food Services
           </Typography>
           <Typography variant="h5" color="text.secondary">
             Empowering the food industry with cutting-edge solutions

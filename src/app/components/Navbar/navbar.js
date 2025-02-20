@@ -98,9 +98,13 @@ function ResponsiveAppBar() {
       <CustomDrawer anchorElNav={anchorElNav} setAnchorElNav={setAnchorElNav} />
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Image src={FoodTechLogo} alt="Logo" height={70} width={100} />
+          <Image src={FoodTechLogo} alt="Logo" height={80} width={150} />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton onClick={handleOpenNavMenu} sx={{ marginLeft: "auto" }}>
+            <IconButton
+              onClick={handleOpenNavMenu}
+              sx={{ marginLeft: "auto" }}
+              aria-label="Open navigation menu"
+            >
               <MenuIcon sx={{ fontSize: "2.5rem" }} />
             </IconButton>
           </Box>
@@ -127,7 +131,7 @@ function ResponsiveAppBar() {
                   justifyContent: "center",
                   padding: "6px 12px",
                   fontSize: "0.8rem",
-                  fontWeight: 600,
+                  fontWeight: 800,
                   lineHeight: 1.75,
                   color: "text.primary",
                   backgroundColor: "background.paper",
@@ -158,7 +162,7 @@ function ResponsiveAppBar() {
                   justifyContent: "center",
                   padding: "6px 12px",
                   fontSize: "0.8rem",
-                  fontWeight: 600,
+                  fontWeight: 800,
                   lineHeight: 1.75,
                   color: "text.primary",
                   backgroundColor: "background.paper",
@@ -251,7 +255,7 @@ function ResponsiveAppBar() {
                   justifyContent: "center",
                   padding: "6px 12px",
                   fontSize: "0.8rem",
-                  fontWeight: 600,
+                  fontWeight: 800,
                   lineHeight: 1.75,
                   color: "text.primary",
                   backgroundColor: "background.paper",
@@ -279,7 +283,7 @@ function ResponsiveAppBar() {
                   justifyContent: "center",
                   padding: "6px 12px",
                   fontSize: "0.8rem",
-                  fontWeight: 600,
+                  fontWeight: 800,
                   lineHeight: 1.75,
                   color: "text.primary",
                   backgroundColor: "background.paper",
@@ -307,7 +311,7 @@ function ResponsiveAppBar() {
                   justifyContent: "center",
                   padding: "6px 12px",
                   fontSize: "0.8rem",
-                  fontWeight: 600,
+                  fontWeight: 800,
                   lineHeight: 1.75,
                   color: "text.primary",
                   backgroundColor: "background.paper",

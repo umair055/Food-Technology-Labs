@@ -13,6 +13,9 @@ import {
   Package,
   Cpu,
 } from "lucide-react";
+import { Button } from "@mui/material";
+import Link from "next/link";
+import { ArrowForwardIos } from "@mui/icons-material";
 // import './FoodServices.css'; // Import the custom CSS
 
 const services = [
@@ -29,12 +32,6 @@ const services = [
     icon: Clipboard,
   },
   {
-    title: "Farm-to-Table Consulting",
-    description:
-      "Helping restaurants or food businesses integrate locally sourced, fresh ingredients into their offerings.",
-    icon: Apple,
-  },
-  {
     title: "Dietary Planning For Special Needs",
     description:
       "Tailored dietary plans for individuals with specific dietary requirements.",
@@ -45,12 +42,6 @@ const services = [
     description:
       "Staying ahead of the curve with in-depth market research and trend analysis.",
     icon: TrendingUp,
-  },
-  {
-    title: "Recipe Development And Testing",
-    description:
-      "Creating innovative and delicious recipes that meet your specific needs.",
-    icon: Cookie,
   },
   {
     title: "Food Photography And Styling",
@@ -70,21 +61,10 @@ const services = [
     icon: Cpu,
   },
   {
-    title: "Diet and Lifestyle Apps Development",
-    description:
-      "Creating personalized apps for meal planning, calorie counting, and healthy lifestyle choices.",
-    icon: Camera,
-  },
-  {
     title: "Food Blogging and Influencer Services",
     description:
       " Offering guidance on starting food blogs, social media content creation, or influencer marketing.",
     icon: Package,
-  },
-  {
-    title: "Pet Food Consulting",
-    description: "Developing nutritious, organic food options for pets.",
-    icon: Cpu,
   },
 ];
 
@@ -129,13 +109,6 @@ const ServiceCard = ({ title, description, icon: Icon, index }) => {
           <h3 className="service-title">{title}</h3>
           <p className="service-description">{description}</p>
         </div>
-        <motion.div
-          className="learn-more"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Learn More
-        </motion.div>
       </motion.div>
     </motion.div>
   );
@@ -155,7 +128,6 @@ const FoodServices = () => {
             {" "}
             -- Food Technology Labs Services --
           </p>
-          Services
         </motion.h1>
         <motion.h2
           className="services-subheading"
@@ -181,6 +153,25 @@ const FoodServices = () => {
           ))}
         </div>
       </div>
+      <Button
+        className="btn "
+        variant="contained"
+        sx={{
+          marginTop: "20px !important",
+          margin: "auto",
+          height: "35px !important",
+          width: "150px !important",
+          fontSize: "12px !important",
+        }}
+      >
+        <Link
+          href={"/food-services"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <span className="span">Get Started</span>
+          <ArrowForwardIos sx={{ fontSize: "12px" }} />
+        </Link>
+      </Button>
     </div>
   );
 };

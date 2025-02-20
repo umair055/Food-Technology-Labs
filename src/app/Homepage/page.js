@@ -39,7 +39,7 @@ function HomePage() {
 
             <Button className="btn btn-primary" variant="contained">
               <Link
-                href={"/"}
+                href={"/food-services"}
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="span">Get Started</span>
@@ -71,7 +71,7 @@ function HomePage() {
         <AnimatedTestimonialSection />
         <Component />
         <EighthComponent />
-        <FoodPartners />
+        {/* <FoodPartners /> */}
         <FAQSection />
         <CrazyFoodChatbot />
       </Box>
