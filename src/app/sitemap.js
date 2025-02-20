@@ -50,6 +50,7 @@ export default async function sitemap() {
     { name: "Food Recipes", value: 3, category: 46 },
     { name: "Food News", value: 4, category: 45 },
   ];
+
   const BASE_URL = "https://www.foodtechnologylabs.com";
 
   const fetchBlogLinks = async () => {
@@ -65,12 +66,13 @@ export default async function sitemap() {
           res.data.forEach((blog) => {
             singleBlogLinks.push({
               url: `${BASE_URL}/${blog.slug}`,
-              lastModified: blog.modified,
-              changefreq: "weekly",
+              lastModified: new Date(blog.modified).toISOString(),
+              changeFrequency: "weekly",
               priority: 1,
             });
           });
         }
+
         return {
           url: `${BASE_URL}/${item.name
             .toLowerCase()
@@ -112,7 +114,7 @@ export default async function sitemap() {
     url: BASE_URL + path,
     changeFrequency: "monthly",
     priority: 0.6,
-    lastModified: new Date(),
+    lastModified: new Date().toISOString(),
   }));
 
   allLinks.push(...staticPages);
