@@ -34,7 +34,10 @@ export default function FoodSection() {
             >
               Your Food, Our Passion
             </Typography>
-            <Typography variant="body1" sx={{ color: "black" }}>
+            <Typography
+              variant="body1"
+              sx={{ color: "black", fontSize: "20px" }}
+            >
               Are You Facing Food Safety & Quality-Related Issues In Your Food
               Business?
             </Typography>

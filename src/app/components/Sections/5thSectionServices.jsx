@@ -98,7 +98,11 @@ const ServiceCard = ({ title, description, icon: Icon, index }) => {
         whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <div className="service-card-inner">
+        <Link
+          style={{ textDecoration: "none" }}
+          href="/food-services"
+          className="service-card-inner"
+        >
           <motion.div
             className="service-icon"
             whileHover={{ scale: 1.2, rotate: 360 }}
@@ -108,7 +112,7 @@ const ServiceCard = ({ title, description, icon: Icon, index }) => {
           </motion.div>
           <h3 className="service-title">{title}</h3>
           <p className="service-description">{description}</p>
-        </div>
+        </Link>
       </motion.div>
     </motion.div>
   );
@@ -153,25 +157,6 @@ const FoodServices = () => {
           ))}
         </div>
       </div>
-      <Button
-        className="btn "
-        variant="contained"
-        sx={{
-          marginTop: "20px !important",
-          margin: "auto",
-          height: "35px !important",
-          width: "150px !important",
-          fontSize: "12px !important",
-        }}
-      >
-        <Link
-          href={"/food-services"}
-          style={{ textDecoration: "none", color: "white" }}
-        >
-          <span className="span">Get Started</span>
-          <ArrowForwardIos sx={{ fontSize: "12px" }} />
-        </Link>
-      </Button>
     </div>
   );
 };
