@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import Link from "next/link";
 import "./singleBlog.css";
+import * as cheerio from "cheerio";
 const postsPerPage = 10;
 
 export async function generateMetadata({ searchParams, params }) {
@@ -34,6 +35,11 @@ export async function generateMetadata({ searchParams, params }) {
       title,
       description,
       metaImage,
+      robots: "index, follow",
+      alternates: {
+        canonical:
+          "https://www.foodtechnologylabs.com/" + response.data[0].slug,
+      },
     };
   }
 
@@ -45,12 +51,14 @@ export async function generateMetadata({ searchParams, params }) {
     return {
       title: `${categoryName}`,
       description: `Explore blog posts under the ${categoryName} category.`,
+      robots: "index, follow",
     };
   }
 
   return {
     title: "Blog - Food Technology Labs",
     description: "Read our latest articles on Food Technology Labs.",
+    robots: "index, follow",
   };
 }
 
@@ -58,7 +66,7 @@ const SingleBlog = async ({ searchParams, params }) => {
   let { category, page } = await searchParams;
   let { slug } = await params;
   let url = "";
-
+  let styles;
   if (!page) page = 1;
   if (!category) {
     category = null;
@@ -68,6 +76,12 @@ const SingleBlog = async ({ searchParams, params }) => {
   const data = await axios.get(
     "https://blog.foodtechnologylabs.com/what-does-kombucha-taste-like"
   );
+  const html = data.data;
+  const $ = cheerio.load(html);
+  const styleTags = $("style").toString();
+
+  const linkTags = $('link[rel="stylesheet"]').toString();
+  styles = styleTags + linkTags;
   const response = await axios.get(url);
   let blog;
   if (!category) {
@@ -149,7 +163,7 @@ const SingleBlog = async ({ searchParams, params }) => {
           component={"h2"}
           sx={{ textAlign: "center", display: "none" }}
           dangerouslySetInnerHTML={{
-            __html: data?.data,
+            __html: styles,
           }}
         />
         <Box
@@ -178,6 +192,8 @@ const SingleBlog = async ({ searchParams, params }) => {
                 aspectRatio: "auto 1024/1024",
                 display: "initial",
               }}
+              // height={512}
+              // width={512}
               src={blog?.image}
               component="img"
               loading="lazy"
