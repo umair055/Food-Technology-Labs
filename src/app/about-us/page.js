@@ -30,6 +30,7 @@ export const metadata = {
   description:
     "Discover the story behind Food Technology Labs. Learn about our mission, vision, and commitment to advancing food science and technology.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/about-us" },
+  robots: "index, follow",
 };
 
 export default function AboutUsPage() {

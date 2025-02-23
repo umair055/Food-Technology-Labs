@@ -21,6 +21,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.foodtechnologylabs.com/terms-and-services",
   },
+  robots: "index, follow",
 };
 export default function TermsAndServicePage() {
   const termsItems = [

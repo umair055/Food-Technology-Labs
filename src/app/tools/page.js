@@ -5,6 +5,7 @@ export const metadata = {
   description:
     "Access essential tools and resources for food science professionals. Enhance your research and innovation with Food Technology Labs' curated collection.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/tools" },
+  robots: "index, follow",
 };
 export default function Tools() {
   return <ToolsPage />;

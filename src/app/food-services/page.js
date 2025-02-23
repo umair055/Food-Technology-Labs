@@ -4,6 +4,7 @@ export const metadata = {
   description:
     "Transform the food industry with Food Technology Labs' comprehensive services. Explore our innovative solutions for food science professionals.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/food-services" },
+  robots: "index, follow",
 };
 export default function Services() {
   return <ServicesPage />;

@@ -18,6 +18,7 @@ export const metadata = {
   description:
     "Explore the latest in food science and technology with Food Technology Labs. Discover innovative solutions, tools, and resources for the food industry.",
   alternates: { canonical: "https://www.foodtechnologylabs.com" },
+  robots: "index, follow",
 };
 
 export default function RootLayout({ children }) {

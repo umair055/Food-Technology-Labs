@@ -22,6 +22,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.foodtechnologylabs.com/terms-and-conditions",
   },
+  robots: "index, follow",
 };
 
 export default function TermsAndConditionsPage() {

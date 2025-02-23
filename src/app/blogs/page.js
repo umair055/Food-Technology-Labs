@@ -18,7 +18,9 @@ export const metadata = {
   description:
     "Stay updated with the latest trends and insights in food science and technology. Explore expert articles, research, and news on Food Technology Labs' blog.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/blogs" },
+  robots: "index, follow",
 };
+
 export default async function Blogs({ searchParams }) {
   let { page } = await searchParams;
   if (!page) page = 1;

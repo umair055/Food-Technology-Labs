@@ -22,6 +22,7 @@ export const metadata = {
   description:
     "Join Food Technology Labs as a contributor! Share your expertise in food science and technology with our global audience. Submit your articles today.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/write-for-us" },
+  robots: "index, follow",
 };
 export default function WriteForUsPage() {
   return (

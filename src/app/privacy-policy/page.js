@@ -20,6 +20,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.foodtechnologylabs.com/privacy-policy",
   },
+  robots: "index, follow",
 };
 
 export default function PrivacyPolicyPage() {

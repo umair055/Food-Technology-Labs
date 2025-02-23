@@ -4,6 +4,7 @@ export const metadata = {
   description:
     "Get in touch with Food Technology Labs for inquiries, support, or collaborations. Reach out to us today for expert assistance in food science.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/contact-us" },
+  robots: "index, follow",
 };
 export default function ContactUsPage() {
   return <ContactUs />;

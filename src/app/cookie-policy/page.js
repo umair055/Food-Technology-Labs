@@ -20,6 +20,7 @@ export const metadata = {
   description:
     "Understand how Food Technology Labs uses cookies to enhance your browsing experience. Learn how to manage your cookie preferences.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/cookie-policy" },
+  robots: "index, follow",
 };
 export default function CookiePolicyPage() {
   const cookiePolicyItems = [

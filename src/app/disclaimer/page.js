@@ -18,6 +18,7 @@ export const metadata = {
   description:
     "Read our disclaimer to understand the limitations of liability and user responsibilities when using Food Technology Labs' content and services.",
   alternates: { canonical: "https://www.foodtechnologylabs.com/disclaimer" },
+  robots: "index, follow",
 };
 export default function DisclaimerPage() {
   const disclaimerItems = [
