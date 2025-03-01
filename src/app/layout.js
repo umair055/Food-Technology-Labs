@@ -19,6 +19,9 @@ export const metadata = {
     "Explore the latest in food science and technology with Food Technology Labs. Discover innovative solutions, tools, and resources for the food industry.",
   alternates: { canonical: "https://www.foodtechnologylabs.com" },
   robots: "index, follow",
+  other: {
+    "google-adsense-account": "ca-pub-6558128509243691",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-48x48.png",
