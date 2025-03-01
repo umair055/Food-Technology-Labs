@@ -19,6 +19,31 @@ export const metadata = {
     "Explore the latest in food science and technology with Food Technology Labs. Discover innovative solutions, tools, and resources for the food industry.",
   alternates: { canonical: "https://www.foodtechnologylabs.com" },
   robots: "index, follow",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-48x48.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.png",
+        type: "image/png",
+        sizes: "500x500",
+      },
+      {
+        rel: "icon",
+        url: "/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      {
+        rel: "icon",
+        url: "/favicon-144x144.png",
+        type: "image/png",
+        sizes: "144x144",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
