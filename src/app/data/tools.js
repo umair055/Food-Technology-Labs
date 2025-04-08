@@ -27,10 +27,10 @@ export const tools = [
       "Get inspired with random food suggestions for your next meal or recipe.",
   },
   {
-    id: "truck-name",
+    id: "truck-name-generator",
     name: "Food Truck Name Generator",
     description: "Generate creative food truck business names",
-    category: "generator",
+    category: "generator",  
     icon: "LocalShipping",
     tooltip:
       "Spark your creativity with unique and catchy food truck name ideas for your business.",

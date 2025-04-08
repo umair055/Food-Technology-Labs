@@ -38,7 +38,7 @@ export async function generateMetadata({ searchParams, params }) {
       robots: "index, follow",
       alternates: {
         canonical:
-          "https://www.foodtechnologylabs.com/" + response.data[0].slug,
+          "https://www.foodtechnologylabs.com/" + response?.data[0]?.slug,
       },
     };
   }
@@ -86,7 +86,7 @@ const SingleBlog = async ({ searchParams, params }) => {
   let blog;
   if (!category) {
     const htmlContent = response?.data[0]?.content?.rendered;
-    const cleanHtml = htmlContent.replace(/data-src/g, "src");
+    const cleanHtml = htmlContent?.replace(/data-src/g, "src");
     blog = {
       content: cleanHtml,
       title: response?.data[0]?.title?.rendered,

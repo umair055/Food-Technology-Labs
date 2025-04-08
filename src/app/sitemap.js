@@ -110,6 +110,11 @@ export default async function sitemap() {
     "/food-services",
     "/tools",
     "/blog",
+    "/tools/bmi-calculator",
+    "/tools/calorie-calculator",
+    "/tools/food-generator",
+    "/tools/truck-name-generator",
+    "/tools/recipe-converter",
   ].map((path) => ({
     url: BASE_URL + path,
     changeFrequency: "monthly",
