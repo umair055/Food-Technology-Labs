@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Generate random food suggestions to inspire your next meal or recipe.",
   alternates: {
-    canonical: "https://www.foodtechnologylabs.com/tools/food-generator",
+    canonical: "https://www.foodtechnologylabs.com/food-generator",
   },
   robots: "index, follow",
 };

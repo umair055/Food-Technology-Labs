@@ -77,8 +77,8 @@ export default async function sitemap() {
           url: `${BASE_URL}/${item.name
             .toLowerCase()
             .replace(/\s+/g, "-")}?category=${encodeURIComponent(
-            item.category
-          )}`,
+              item.category
+            )}`,
           lastModified: new Date().toISOString(),
           changeFrequency: "weekly",
           priority: 1,
@@ -110,11 +110,11 @@ export default async function sitemap() {
     "/food-services",
     "/tools",
     "/blog",
-    "/tools/bmi-calculator",
-    "/tools/calorie-calculator",
-    "/tools/food-generator",
-    "/tools/truck-name-generator",
-    "/tools/recipe-converter",
+    "/bmi-calculator",
+    "/calorie-calculator",
+    "/food-generator",
+    "/truck-name-generator",
+    "/recipe-converter",
   ].map((path) => ({
     url: BASE_URL + path,
     changeFrequency: "monthly",

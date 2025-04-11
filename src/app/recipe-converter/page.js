@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Convert recipes between different units of measurement and serving sizes.",
   alternates: {
-    canonical: "https://www.foodtechnologylabs.com/tools/recipe-converter",
+    canonical: "https://www.foodtechnologylabs.com/recipe-converter",
   },
   robots: "index, follow",
 };

@@ -5,7 +5,7 @@ export const metadata = {
   title: "Calorie Calculator",
   description: "Calculate your daily caloric needs based on activity level.",
   alternates: {
-    canonical: "https://www.foodtechnologylabs.com/tools/calorie-calculator",
+    canonical: "https://www.foodtechnologylabs.com/calorie-calculator",
   },
   robots: "index, follow",
 };

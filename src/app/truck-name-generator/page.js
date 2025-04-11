@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Generate creative and catchy names for your food truck business.",
   alternates: {
-    canonical: "https://www.foodtechnologylabs.com/tools/truck-name-generator",
+    canonical: "https://www.foodtechnologylabs.com/truck-name-generator",
   },
   robots: "index, follow",
 };

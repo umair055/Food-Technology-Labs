@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Calculate your Body Mass Index (BMI) based on height and weight.",
   alternates: {
-    canonical: "https://www.foodtechnologylabs.com/tools/bmi-calculator",
+    canonical: "https://www.foodtechnologylabs.com/bmi-calculator",
   },
   robots: "index, follow",
 };
