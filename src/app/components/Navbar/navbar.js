@@ -188,7 +188,7 @@ function ResponsiveAppBar() {
                 onClick={handleOptionSelect}
               />
             </Box>
-            <Box
+            {/* <Box
               sx={{
                 flexGrow: 0.1,
                 display: { xs: "none", md: "flex" },
@@ -226,7 +226,7 @@ function ResponsiveAppBar() {
                 options={foodMangementOption}
                 onClick={handleOptionSelect}
               />
-            </Box>
+            </Box> */}
             <Box
               sx={{
                 flexGrow: 0.1,

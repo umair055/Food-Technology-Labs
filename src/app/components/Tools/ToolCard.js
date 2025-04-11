@@ -100,7 +100,7 @@ export default function ToolCard({ tool, onFavorite, onClick }) {
             fullWidth
             variant="contained"
             color="success"
-            href={`/tools/${tool.id}`}
+            href={`/${tool.id}`}
             onClick={() => onClick(tool.id)}
             sx={{
               color: "white",
