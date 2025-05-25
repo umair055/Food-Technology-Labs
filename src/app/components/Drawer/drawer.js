@@ -92,6 +92,8 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
     if (name === "Home") navigate.push("/");
     else if (name === "ContactUs") navigate.push("/contact-us");
     else if (name === "AboutUs") navigate.push("/about-us");
+    else if (name === "Food Services") navigate.push("/food-services");
+    else if (name === "Food Tools") navigate.push("/tools");
     else {
       const formattedName = name.toLowerCase().split(" ").join("-");
       navigate.push(
@@ -135,6 +137,17 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
               sx: { fontSize: "20px", color: "#f5f2ee", fontStyle: "normal" },
             }}
             primary="Home"
+          />
+        </ListItemButton>
+        <ListItemButton
+          onClick={() => handleOptionSelect(0, "Food Services")}
+          sx={{ borderBottom: "1px solid #FFFFFF19", height: "70px", py: 0 }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              sx: { fontSize: "20px", color: "#f5f2ee", fontStyle: "normal" },
+            }}
+            primary="Food Services"
           />
         </ListItemButton>
         <ListItemButton sx={{ borderBottom: "1px solid #FFFFFF19", py: 0 }}>
@@ -193,7 +206,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
             ))}
           </List>
         </Collapse>
-        <ListItemButton sx={{ borderBottom: "1px solid #FFFFFF19", py: 0 }}>
+        {/* <ListItemButton sx={{ borderBottom: "1px solid #FFFFFF19", py: 0 }}>
           <ListItemText
             primaryTypographyProps={{
               sx: { fontSize: "20px", color: "#f5f2ee", fontStyle: "normal" },
@@ -360,7 +373,7 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
               </ListItemButton>
             ))}
           </List>
-        </Collapse>
+        </Collapse> */}
         <ListItemButton sx={{ borderBottom: "1px solid #FFFFFF19", py: 0 }}>
           <ListItemText
             primaryTypographyProps={{
@@ -417,6 +430,17 @@ export default function CustomDrawer({ anchorElNav, setAnchorElNav }) {
             ))}
           </List>
         </Collapse>
+        <ListItemButton
+          onClick={() => handleOptionSelect(0, "Food Tools")}
+          sx={{ borderBottom: "1px solid #FFFFFF19", height: "70px", py: 0 }}
+        >
+          <ListItemText
+            primaryTypographyProps={{
+              sx: { fontSize: "20px", color: "#f5f2ee", fontStyle: "normal" },
+            }}
+            primary="Food Tools"
+          />
+        </ListItemButton>
         <ListItemButton
           onClick={() => handleOptionSelect(0, "AboutUs")}
           sx={{ borderBottom: "1px solid #FFFFFF19", height: "70px", py: 0 }}
